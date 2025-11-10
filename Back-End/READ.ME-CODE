@@ -1,0 +1,69 @@
+frame di lavoro:
+
+- Iintellij IDEA (Java)
+- PostgresSQL (Databese per il Back-End)
+
+dipendenze utilizzate lato Back-End-end:
+
+1. spring-boot-devtools
+Scopo: sviluppo (runtime)
+Descrizione: Fornisce strumenti per ricaricamento automatico (hot reload) durante lo sviluppo.
+Dove trovarla: Maven Repository - spring-boot-devtools
+
+2. spring-boot-starter-data-jpa
+Scopo: persistenzia dati (Database + ORM)
+Descrizione: Aggiunge Spring Data JPA + Hibernate per interagire con database relazionali.
+Dove trovarla: spring-boot-starter-data-jpa
+
+3. spring-boot-starter-web
+Scopo: creare API REST o web app.
+Descrizione: Include Spring MVC, Tomcat integrato, e dipendenze per creare controller REST.
+Dove trovarla: spring-boot-starter-web
+
+4. spring-boot-starter-validation
+Scopo: validazione dei dati (input, DTO, entity).
+Descrizione: Include Jakarta Validation (ex Bean Validation), con annotazioni come @NotNull, @Email, @Size, ecc.
+Dove trovarla: spring-boot-starter-validation
+
+5. cloudinary-http44
+Descrizione: Libreria per integrare Cloudinary, servizio cloud per gestire immagini e video, Serve per caricare, trasformare e servire immagini.
+Dove trovarla: cloudinary-http44
+
+✉6. spring-boot-starter-mail
+Descrizione: Abilita l’invio di email tramite Spring Boot, usando protocolli come SMTP, Utile per notifiche, conferme, reset password, ecc.
+Dove trovarla: spring-boot-starter-mail
+
+7. javafaker
+Descrizione: Libreria per generare dati finti (fake data): nomi, email, città, indirizzi, ecc. Utile nei test o popolamento iniziale del database.
+Dove trovarla: javafaker
+
+8. springdoc-openapi-starter-webmvc-ui
+Descrizione: Genera automaticamente la documentazione OpenAPI / Swagger UI per le API REST.
+Dove trovarla: springdoc-openapi-starter-webmvc-ui
+
+9. postgresql
+Descrizione: Driver JDBC per connettere Spring Boot a un database PostgreSQL.
+Dove trovarla: postgresql JDBC Driver
+
+10. lombok
+Descrizione: Riduce il codice boilerplate in Java (getter, setter, costruttori, toString, ecc.).
+Dove trovarla: Project Lombok
+
+11. spring-boot-starter-test
+Descrizione: Contiene JUnit 5, Mockito, e altre librerie per il testing delle applicazioni Spring Boot.
+Dove trovarla: spring-boot-starter-test
+
+12. spring-boot-starter-security
+Descrizione: Aggiunge il modulo Spring Security, per autenticazione e autorizzazione, Utile per login, ruoli, protezione endpoint, ecc.
+Dove trovarla: spring-boot-starter-security
+
+13–15. jjwt-api / jjwt-impl / jjwt-jackson
+Descrizione: Libreria Java JWT (JSON Web Token) per creare, firmare e validare token JWT.
+jjwt-api → interfacce pubbliche
+jjwt-impl → implementazione runtime
+jjwt-jackson → supporto per JSON via Jackson
+Dove trovarla: JJWT
+
+16. spring-security-test
+Descrizione: Estensione per testare applicazioni con Spring Security. Fornisce annotazioni come @WithMockUser per simulare utenti nei test.
+Dove trovarla: spring-security-test
