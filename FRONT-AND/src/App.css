@@ -1309,6 +1309,120 @@
   }
 }
 
+/*css Creazione*/
+
+.mainCreazione{
+  background-image: url('./img/bacrgound\ image\ per\ pagina\ creazione.avif');
+  background-size: contain;
+  padding-top: 4rem;
+  min-height: 48rem;
+}
+
+.sectionOff{
+  background-image: url('./img/bacrgound\ image\ per\ pagina\ creazione.avif');
+  background-size: contain;
+  padding-top: 4rem;
+  filter: blur(2px) brightness(0.5);
+  pointer-events: none;
+  min-height: 48rem;
+}
+
+.sectionBar{
+  display: flex;
+  align-items: center;
+}
+
+#barSearch{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.segna{
+  background-color: rgb(223, 223, 105);
+  margin: 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 2px solid #252525;
+  border-radius: 1rem;
+  font-size: x-small;
+}
+
+.categorie{
+  background-color: red;
+  margin: 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 2px solid #252525;
+  border-radius: 1rem;
+  margin: 0;
+  font-size: x-small;
+}
+
+.aricoliContenutiCategorie{
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.salvareContenuto{
+    margin: 1rem;
+    font-size: x-small;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background-color: greenyellow;
+    justify-content: space-around;
+    width: 55%;
+    font-size: smaller;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.salvareContenuto Button{
+  margin: 0.5rem;
+  background-color: greenyellow;
+  border-radius: 0.5rem;
+  border-color: #69f5b4;
+}
+
+.sottoArticoli{
+  text-align: center;
+  background-color: white;
+  margin: 2rem;
+}
+
+.sottoArticoli img{
+  width: 75%;
+}
+
+.salvaCrea{
+  background-color: white;
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+  bottom: 35rem;
+}
+
+.salvaCreaOff{
+  display: none;
+}
+
+.cardCreazione{
+  background-color: white;
+  margin: 1rem;
+  width: 40%;
+  text-align: center;
+}
+
+.cardCategoria{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  background-color: red;
+  width: 100%;
+}
+
 /*css per componenti non finiti*/
 /*ComponenteSingolo*/
 
