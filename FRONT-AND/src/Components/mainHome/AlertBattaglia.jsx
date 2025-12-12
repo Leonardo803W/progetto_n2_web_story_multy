@@ -1,5 +1,5 @@
-import img1 from '../img/alert/gift per allerta 1.gif'
-import img2 from '../img/alert/gift per allerta 2.gif'
+import img1 from '../../img/alert/gift per allerta 1.gif'
+import img2 from '../../img/alert/gift per allerta 2.gif'
 
 const AlertBattaglia = () => {
 

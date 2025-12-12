@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// Immagini delle battaglie
-import imgB1 from '../img/img (caroselli home)/battaglie/Battaglia di Hastings.jpeg'
-import imgB2 from '../img/img (caroselli home)/battaglie/Battaglia di Waterloo.jpg'
-import imgB3 from '../img/img (caroselli home)/battaglie/La Battaglia di Stalingrado.jpg'
-import imgB4 from '../img/img (caroselli home)/battaglie/Battaglia di Midway.jpg'
-import imgB5 from '../img/img (caroselli home)/battaglie/Battaglia di Lepanto.jpg'
+/*card e import da sostituire con fetch in un secondo momneto*/
+import imgB2 from '../../img/img (caroselli home)/battaglie/Battaglia di Waterloo.jpg'
 
 const cards = [
     { id: 1, 
@@ -38,24 +34,21 @@ const cards = [
 
 const MainHomeSection2 = () => {
 
+    //variabile per le animazioni dei caroselli
     const [animateDiv, setAnimateDiv] = useState(true);
     const [animateCarosell, setAnimateCarosell] = useState(false);
 
-    //variabili per i caroselli
+    //variabili per l'index dei caroselli
     const [activeIndex, setActiveIndex] = useState (0)
     const [activeIndexTablet, setActiveIndexTablet] = useState (0)
     const totalCards = cards.length;
     
-    // Per la barra di progresso del primo carosello
-    const progress = ((activeIndexTablet + 1) / totalCards) * 100;
-
     const handleGiraPagina = () => {
         setAnimateDiv(prev => !prev);
         setAnimateCarosell(prev => !prev);
     };
 
     //funzione per avere la card attiva sempre al centro per dispositivi da tablet in su
-
     const getVisibleCardsForTablet = () => { 
         const indices = []; 
         const start = Math.max(0, activeIndexTablet - 1); 
@@ -69,7 +62,7 @@ const MainHomeSection2 = () => {
     }; 
     const visibleIndicesTablet = getVisibleCardsForTablet();
 
-    //funzione per fermare il carosello o all'inizio o alla fine per telefono
+    //funzione per fermare il carosello o all'inizio o alla fine
     const goToNextOrPrev = (next) => {
 
         if(next === 'next')

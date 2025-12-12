@@ -1,5 +1,5 @@
-import Creazione from "./Creazione";
-import GlobalNavbar from "./GlobalNavbar";
+import Creazione from "../mainCreazione/Creazione";
+import GlobalNavbar from "../GlobalNavbar";
 
 const SchermataCreazione = () => {
 

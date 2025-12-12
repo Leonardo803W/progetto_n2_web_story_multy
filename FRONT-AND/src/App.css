@@ -50,10 +50,6 @@
 
 /*CSS per GlobalNavbar*/
 
-#sectionNavbar{
-  margin-bottom: 4rem;
-}
-
 #navbar{
   position: fixed;
   top: 0;
@@ -63,7 +59,7 @@
   background-color: black;
   align-items: center;
   width: 100%;
-  border-bottom: white 4px solid;
+  border-bottom: white 1px solid;
   background-size: 426px 167px;
   height: 6rem;
 }
@@ -74,7 +70,7 @@
   border-color: unset;
 }
 
-#offCansHeader{
+.offCansHeader{
   background-color: #453d3d;
   color: white;
 }
@@ -108,8 +104,15 @@
  display: none;
 }
 
-#navbar-profile{
+.navbar-profile{
   background: #ffffff99;
+  border-color: unset;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.navbar-profileOpen{
+  background: #d61f1f99;
   border-color: unset;
   padding: 0.5rem;
   position: relative;

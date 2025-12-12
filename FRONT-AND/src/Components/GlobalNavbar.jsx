@@ -5,23 +5,25 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const GlobalNavbar = ({ triggerAlert }) => {
     
-  //inizializzazione variabili
-  const [show, setShow] = useState(false);
+  //inizializzazione variabili per menu e profile
+  const [showMenu, setShowMenu] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
 
-  //funzioni
-  const handleClose = () => {
-    //console.log(false)
-    setShow(false);
-  }
-  const handleShow = () => {
-    //console.log(true)
-    setShow(true);
-  }
+  //funzione per menu e profile
+  const handlemenuProfile= (valore) => {
 
-  const handleProfile = () => {
-    
-    setShowProfile(prevState => !prevState);
+    switch(valore)
+    {
+      case 1:
+        setShowMenu(true);
+        break;
+      case 2:
+        setShowMenu(false);
+        break;
+      case 'profileOpen':
+        setShowProfile(prevState => !prevState);
+        break;
+    }
   }
 
   const handelAlert = (n) => {
@@ -36,16 +38,16 @@ const GlobalNavbar = ({ triggerAlert }) => {
 
   return (
     <>
-        <section id = "sectionNavbar">
+        <section className = "mb-5">
 
           <div id = "navbar">
-            <Button onClick = {handleShow} id = "show-on-mobile">
+            <Button onClick = {() => handlemenuProfile(1)} id = "show-on-mobile">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" className="bi bi-list" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
             </Button>
 
-            <Offcanvas show = {show} onHide={handleClose}>
+            <Offcanvas show = {showMenu} onHide={() => handlemenuProfile(2)}>
               <Offcanvas.Header closeButton id = "offCansHeader">
                 <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
               </Offcanvas.Header>
@@ -70,7 +72,7 @@ const GlobalNavbar = ({ triggerAlert }) => {
             </Link>
 
             <div id = "navbar-item-desktop">
-              <p className = "enter"  onClick = {() => handelAlert(1)}>
+              <p className = "enter"  onClick = {() => handlemenuProfile(2)}>
                 <Link to = '#'>Battaglie</Link>
               </p>
               <p className = "notEnter">
@@ -84,18 +86,20 @@ const GlobalNavbar = ({ triggerAlert }) => {
               </p>
             </div>
 
-            <div onClick={handleProfile} id = "navbar-profile">
+            <div onClick={() => handlemenuProfile('profileOpen')} className = {showProfile ? "navbar-profileOpen" : "navbar-profile"}>
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" className="bi bi-person-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                   <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                 </svg>
+              </div>
 
                 {showProfile &&
-                  <div id = "profile-items">
-                    <Link to = '/Creazione'>
-                      <p>Pagina modifica contenuti</p>
-                    </Link>
-                  </div>
+                    <div id = "profile-items">
+                      <Link to = '/Creazione'>
+                        <p>Pagina modifica contenuti</p>
+                      </Link>
+                    </div>
                 }
             </div>
           </div>

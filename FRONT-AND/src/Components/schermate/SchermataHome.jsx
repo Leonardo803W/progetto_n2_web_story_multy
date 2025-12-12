@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import GlobalNavbar from "./GlobalNavbar";
-import MainHomeSection1 from "./MainHomeSection1";
-import MainHomeSection2 from "./MainHomeSection2";
-import MainHomeSection3 from "./MainHomeSection3";
-import MainHomeSection4 from "./MainHomeSection4";
-import AlertBattaglia from "../Components/AlertBattaglia";
+import GlobalNavbar from "../GlobalNavbar";
+import MainHomeSection1 from "../mainHome/MainHomeSection1";
+import MainHomeSection2 from "../mainHome/MainHomeSection2";
+import MainHomeSection3 from "../mainHome/MainHomeSection3";
+import MainHomeSection4 from "../mainHome/MainHomeSection4";
+import AlertBattaglia from "../mainHome/AlertBattaglia";
 
 //schermata principale iniziale
 

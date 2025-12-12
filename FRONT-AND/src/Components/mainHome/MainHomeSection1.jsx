@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import img1 from '../img/backgroundImgSection1.jpeg'
+import img1 from '../../img/backgroundImgSection1.jpeg'
 
 const MainHomeSection1 = () => {
 

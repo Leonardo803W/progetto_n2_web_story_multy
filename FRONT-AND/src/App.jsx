@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SchermataHome from './Components/SchermataHome';
-import SchermataCreazione from "./Components/SchermataCreazione";
+import SchermataHome from './Components/schermate/SchermataHome';
+import SchermataCreazione from "./Components/schermate/SchermataCreazione";
 
 function App() {
   return (
