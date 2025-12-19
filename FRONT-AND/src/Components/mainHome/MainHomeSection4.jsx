@@ -43,7 +43,7 @@ const MainHomeSection4 = () => {
                                 <img src={imgDivulgatori1} alt="" />
                                 <hr className='m-1 text-light'/>
                                 <div className='groupContent'>
-                                    <h5>{articolo.titile}</h5>
+                                    <h5>{articolo.title}</h5>
                                     <p>{articolo.content}</p>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ const MainHomeSection4 = () => {
                                     <img src={imgDivulgatori1} alt="" />
                                     <hr className='m-1 text-light'/>
                                     <div className='groupContent'>
-                                        <h5>{articolo.titile}</h5>
+                                        <h5>{articolo.title}</h5>
                                         <p>{articolo.content}</p>
                                     </div>
                                 </div>

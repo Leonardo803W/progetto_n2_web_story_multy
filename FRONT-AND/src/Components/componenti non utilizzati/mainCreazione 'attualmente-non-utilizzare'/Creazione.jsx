@@ -14,9 +14,10 @@ const Creazione = () => {
     const [numberGroupSave, setNumberGroupSave] = useState ('');
     const [categoriaSave, setCategoriaSave] = useState ('');
     const [titoloSave, setTitoloSave] = useState ('');
-    const [introSave, setIntroSave] = useState ('');
-    const [testoSave, setTestoSave] = useState ('');
+    //const [introSave, setIntroSave] = useState ('');
+    //const [testoSave, setTestoSave] = useState ('');
     const [linkSave, setLinkSave] = useState ('');
+    const [imageSave, setImageSave] = useState('');
 
     //variabili per permettere all'admin di poter eselezionare e vedere solo un determinato gruppo o piu'
     const [battaglie, setBattaglie] = useState ([]);
@@ -25,14 +26,14 @@ const Creazione = () => {
     const [epoche, setEpoche] = useState ([]);
     const [divulgatori, setDivulgatori] = useState ([]);
 
+    /*
     //configuarazione variabile per nbon avere duplicati degli articoli
     const articoliConfig = [
         { id: 1, titolo: 'Waterloo', intro: 'La sconfitta decisiva di Napoleone', img: 'https://placedog.net/500', items: battaglie },
         { id: 2, titolo: 'Continenti', intro: 'Ogni continente ha la sua storia', img: 'https://placedog.net/500', items: invenzioni },
         { id: 3, titolo: 'Epoche', intro: 'Fin dagli inizi l’uomo...', img: 'https://placedog.net/500', items: continenti },
         { id: 4, titolo: 'Altro', intro: 'Descrizione generica', img: 'https://placedog.net/500', items: epoche },
-    ];
-
+    ];*/
 
     //variabili per searchBar e per visualizzare elementi nella pagina tramite funzioni al di fuori delle fetch
     const [segnate, setSegnate] = useState([]); 
@@ -47,10 +48,11 @@ const Creazione = () => {
     const [allCard, setAllCard] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [searchOnn, setSearchOnn] = useState(false);
+    const [searchBar, setSearchBar] = useState(true);
     const searchRef = useRef(null);
     const [showButtonCreazione, setButtonCrezione] = useState (true)
     const [openModuleSaveOrModify, setOpenSaveOrModify] = useState (false)
-    const [showOnModify, setOpenSaveOrModifyModify] = useState (false)
+    const [showOnModify, setShowOnModify] = useState (false)
 
     //fetch per ricerevere tutti i dati
     useEffect(() => {
@@ -62,7 +64,7 @@ const Creazione = () => {
                 if (!response.ok) throw new Error('Network response was not ok');
                 
                 const result = await response.json();
-                //console.log(result)
+                console.log(result)
                 setData(result);
                 assignGroups(result.data.content);
 
@@ -94,6 +96,7 @@ const Creazione = () => {
                     intro: introSave, 
                     testo: testoSave, 
                     link_: linkSave, 
+                    image: imageSave,
                 }),
             });
 
@@ -148,9 +151,10 @@ const Creazione = () => {
                     number_group: numberGroupSave, 
                     categoria: categoriaSave,
                     titolo: titoloSave,
-                    intro: introSave, 
-                    testo: testoSave, 
+                    //intro: introSave, 
+                    //testo: testoSave, 
                     link_: linkSave, 
+                    image: imageSave,
                 }),
             });
 
@@ -182,7 +186,7 @@ const Creazione = () => {
             });
 
             resetFields();
-            setOpenSaveOrModifyModify(false);
+            setShowOnModify(false);
             setOpenSaveOrModify(false);
 
         } catch (error) {
@@ -214,15 +218,17 @@ const Creazione = () => {
 
     //funzione per modificare i vari input dei vari elementi
     const handleModifyOpen = (item) => {
-        setNumberGroupSave(item.numberGroup);
-        setCategoriaSave(item.categoria);
-        setTitoloSave(item.titolo);
-        setIntroSave(item.intro);
-        setTestoSave(item.testo);
-        setLinkSave(item.link_);
-        localStorage.setItem('id', item.id) // salvo l'elemento da modificare
+        setNumberGroupSave(item.number_group ?? '');
+        setCategoriaSave(item.categoria ?? '');
+        setTitoloSave(item.titolo ?? '');
+        //setIntroSave(item.intro ?? '');
+        //setTestoSave(item.testo ?? '');
+        setLinkSave(item.link_ ?? '');
+        setImageSave(item.image ?? '');
+
+        localStorage.setItem('id', item.id);
         setOpenSaveOrModify(true);
-        setOpenSaveOrModifyModify(true);
+        setShowOnModify(true);
     };
 
     // funzione per risettare i campi dopo qualunque fetch
@@ -230,12 +236,14 @@ const Creazione = () => {
         setNumberGroupSave('');
         setCategoriaSave('');
         setTitoloSave('');
-        setIntroSave('');
-        setTestoSave('');
+        //setIntroSave('');
+        //setTestoSave('');
         setLinkSave('');
+        setImageSave('');
+
         localStorage.removeItem('id');
         setOpenSaveOrModify(prevState => !prevState)
-        setOpenSaveOrModifyModify(false);
+        setShowOnModify(false);
     };
 
     //funzione per assegnare i vari gruppi alle variabili giuste per visualizzare solo determinati gruppi
@@ -251,14 +259,6 @@ const Creazione = () => {
         setContinenti(continentiArr);
         setEpoche(epocheArr);
         setDivulgatori(divulgatoriArr);
-
-        setAllArticole({
-            battaglie: battaglieArr,
-            invenzioni: invenzioniArr,
-            continenti: continentiArr,
-            epoche: epocheArr,
-            divulgatori: divulgatoriArr
-        });
     };
 
     const handelShow = () => {
@@ -298,6 +298,14 @@ const Creazione = () => {
             case 'quarto':
             setArticolo4(prev => !prev);
             break;
+        }
+
+        if(segnate.length === 0)
+        {
+            setSottoArticolo1(false);
+            setSottoArticolo2(false);
+            setSottoArticolo3(false);
+            setSottoArticolo4(false);
         }
     };
 
@@ -350,18 +358,19 @@ const Creazione = () => {
 
     return(
         <>
+        <section className = "h-0">
             <section className = {openModuleSaveOrModify ? 'sectionOff' : "mainCreazione"}>
                 <section>
-                    <div id = "barSearch">
-                        <input 
-                            type="text" 
-                            placeholder="cerca per titolo" 
-                            className="w-100"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            onClick={() => handelMain()}
-                            ref={searchRef}
-                        />
+                    <div id = 'barSearch'>
+                            <input 
+                                type="text" 
+                                placeholder="cerca per titolo" 
+                                className = 'search'
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                onClick={() => handelMain()}
+                                ref={searchRef}
+                            />
                     </div>
 
                     <div onClick = {handelShow} className = {showButtonCreazione ? "salvareContenuto" : 'd-none'}>
@@ -399,6 +408,8 @@ const Creazione = () => {
                     </div>
                 </section>
 
+                <div id="point"></div>
+
                 <section className = {searchOnn ? 'd-none' : 'd-block'}>
                     <div className = {allCard ? 'd-flex flex-wrap justify-content-around' : 'd-none'}>
                         {data.data && data.data.content.length > 0 ? (
@@ -411,7 +422,7 @@ const Creazione = () => {
                                         <p className = "cardCategoria"><strong>Categoria:</strong> {item.categoria || 'N/A'}</p>
                                     </div>
 
-                                    <div className = "d-flex justify-content-around">
+                                    <div className = "groupBottonCreazione">
                                         <button onClick={() => handleModifyOpen(item)}>modifica</button>
                                         <button onClick={() => handleDelete(item.id)}>elimina</button>
                                     </div>
@@ -435,7 +446,7 @@ const Creazione = () => {
                                         <p className="cardCategoria"><strong>Categoria:</strong> {item.categoria || 'N/A'}</p>
                                     </div>
 
-                                    <div className="d-flex justify-content-around">
+                                    <div className="groupBottonCreazione">
                                         <button onClick={() => handleModifyOpen(item)}>modifica</button>
                                         <button onClick={() => handleDelete(item.id)}>elimina</button>
                                     </div>
@@ -450,8 +461,8 @@ const Creazione = () => {
                 <section>
                     <div className={articolo1 ? 'd-block' : 'd-none'}>
                         <ArticoloAnteprima
-                            titolo="Waterloo"
-                            intro="La sconfitta decisiva di Napoleone"
+                            categoria="Battaglie"
+                            n = "1"
                             img="https://placedog.net/500"
                             onClick={() => handelContenitore('sottoArticolo1')}
                         />
@@ -467,7 +478,8 @@ const Creazione = () => {
 
                     <div className={articolo2 ? 'd-block' : 'd-none'}>
                         <ArticoloAnteprima
-                            titolo="Waterloo"
+                            categoria="=Invenzioni"
+                            n = "2"
                             intro="La sconfitta decisiva di Napoleone"
                             img="https://placedog.net/500"
                             onClick={() => handelContenitore('sottoArticolo2')}
@@ -484,7 +496,8 @@ const Creazione = () => {
 
                     <div className={articolo3 ? 'd-block' : 'd-none'}>
                         <ArticoloAnteprima
-                            titolo="Waterloo"
+                            categoria="Epoche"
+                            n = "3"
                             intro="La sconfitta decisiva di Napoleone"
                             img="https://placedog.net/500"
                             onClick={() => handelContenitore('sottoArticolo3')}
@@ -501,8 +514,8 @@ const Creazione = () => {
 
                     <div className={articolo4 ? 'd-block' : 'd-none'}>
                         <ArticoloAnteprima
-                            titolo="Waterloo"
-                            intro="La sconfitta decisiva di Napoleone"
+                            categoria="Divulgatori"
+                            n = "4"
                             img="https://placedog.net/500"
                             onClick={() => handelContenitore('sottoArticolo4')}
                         />
@@ -524,15 +537,17 @@ const Creazione = () => {
                     numberGroupSave={numberGroupSave} setNumberGroupSave={setNumberGroupSave}
                     categoriaSave={categoriaSave} setCategoriaSave={setCategoriaSave}
                     titoloSave={titoloSave} setTitoloSave={setTitoloSave}
-                    introSave={introSave} setIntroSave={setIntroSave}
-                    testoSave={testoSave} setTestoSave={setTestoSave}
+                    //introSave={introSave} setIntroSave={setIntroSave}
+                    //testoSave={testoSave} setTestoSave={setTestoSave}
                     linkSave={linkSave} setLinkSave={setLinkSave}
+                    imageSave={imageSave} setImageSave={setImageSave}
                     resetFields={resetFields}
                     handleCreate={handleCreate}
                     handleModify={handleModify}
                     showOnModify={showOnModify}
                 />
             }
+            </section>
         </>
     )
 }

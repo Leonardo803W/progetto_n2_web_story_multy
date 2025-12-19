@@ -52,8 +52,11 @@ const GlobalNavbar = ({ triggerAlert }) => {
                 <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body id = "offCanvsBody">
+                    <p className = "notEnter">
+                      <Link to = "/">Home</Link>
+                    </p>
                     <p className = "enter" onClick = {() => handelAlert(1)}>
-                      <Link to = '#'>Battaglie</Link>
+                      <Link to = '/Battaglie'>Battaglie</Link>
                     </p>
                     <p className = "notEnter">
                       <Link to = "#">Invenzioni</Link>
@@ -72,8 +75,11 @@ const GlobalNavbar = ({ triggerAlert }) => {
             </Link>
 
             <div id = "navbar-item-desktop">
+              <p className = "enter">
+                <Link to = '/'>Home</Link>
+              </p>
               <p className = "enter"  onClick = {() => handlemenuProfile(2)}>
-                <Link to = '#'>Battaglie</Link>
+                <Link to = '/Battaglie'>Battaglie</Link>
               </p>
               <p className = "notEnter">
                 <Link to = "#"  className = "notEnter">Invenzioni</Link>
@@ -86,6 +92,7 @@ const GlobalNavbar = ({ triggerAlert }) => {
               </p>
             </div>
 
+            {/*
             <div onClick={() => handlemenuProfile('profileOpen')} className = {showProfile ? "navbar-profileOpen" : "navbar-profile"}>
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" className="bi bi-person-circle" viewBox="0 0 16 16">
@@ -101,7 +108,7 @@ const GlobalNavbar = ({ triggerAlert }) => {
                       </Link>
                     </div>
                 }
-            </div>
+            </div>*/}
           </div>
         </section>
 

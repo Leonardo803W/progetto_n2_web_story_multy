@@ -1,20 +1,20 @@
-import Creazione from "../mainCreazione/Creazione";
 import GlobalNavbar from "../GlobalNavbar";
+import ComponenteSingolo from "../mainBattaglie/ComponenteSingolo";
 
-const SchermataCreazione = () => {
+const SchermataBattaglie = () => {
 
     return(
         <>
             <header>
                 <GlobalNavbar/>
             </header>
-            
-            <main>
-                <Creazione/>
-            </main>
 
+            <main>
+                <ComponenteSingolo/>
+            </main>
+            
         </>
     )
 }
 
-export default SchermataCreazione;
+export default SchermataBattaglie;

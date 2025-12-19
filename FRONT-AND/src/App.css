@@ -1341,8 +1341,15 @@
   width: 80%;
 }
 
+.search{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border-color: #356b6f;
+}
+
 .segna{
-  background-color: rgb(223, 223, 105);
+  background-color: red;
   margin: 0;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: 2px solid #252525;
@@ -1351,7 +1358,7 @@
 }
 
 .categorie{
-  background-color: red;
+  background-color: rgb(223, 223, 105);
   margin: 0;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: 2px solid #252525;
@@ -1369,18 +1376,19 @@
 }
 
 .salvareContenuto{
-    margin: 1rem;
-    font-size: x-small;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    background-color: greenyellow;
-    justify-content: space-around;
-    width: 55%;
-    font-size: smaller;
-    padding: 0.5rem;
-    text-align: center;
+  margin: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0px 6px 10px 1px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background-color: greenyellow;
+  justify-content: space-around;
+  width: 55%;
+  font-size: smaller;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 .salvareContenuto Button{
@@ -1392,20 +1400,25 @@
 
 .sottoArticoli{
   text-align: center;
-  background-color: white;
+  background-color: #ffffffc7;
   margin: 2rem;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  border-radius: 1rem 1rem 1rem 1rem;
 }
 
 .sottoArticoli img{
-  width: 75%;
+  width: 95%;
 }
 
 .salvaCrea{
   background-color: white;
-  position: relative;
+  position: absolute;
   margin: 1rem;
   padding: 1rem;
-  bottom: 35rem;
+  bottom: 3rem;
+  left: 2rem;
+  width: 80%;
+  text-align: center;
 }
 
 .salvaCreaOff{
@@ -1413,10 +1426,15 @@
 }
 
 .cardCreazione{
+  border-radius: 2rem 2rem 0rem 0rem;
+  box-shadow: 6px 0px 12px 9px;
   background-color: white;
   margin: 1rem;
   width: 40%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardCategoria{
@@ -1426,49 +1444,133 @@
   width: 100%;
 }
 
+.groupBottonCreazione{
+  display: flex;
+  justify-content: space-around;
+}
+
+.groupBottonCreazione > Button{
+  border-radius: 1rem 0rem 0rem 1rem;
+  background-color: #bdbdbd;
+  border-color: #7b7b7b;
+}
+
+.groupBottonCreazione > :last-child{
+  border-radius: 0rem 1rem 1rem 0rem;
+  background-color: #bdbdbd;
+  border-color: #7b7b7b;
+}
+
+.categorieArticoloAnteprima{
+  margin: 0;
+  background-color: #ff2e2e;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.titolo{
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #b3b3b3;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
 /*css per componenti non finiti*/
 /*ComponenteSingolo*/
 
-.groupCapitoliBattle{
-  display: flex;
-  background-image: url();
-  background-size: contain;
+#bigSectionBattaglie{
+  margin-top: 6rem;
 }
 
-.capitoli{
+#introBattaglie{
+  background-image: url('./img/img_mainBattaglie/img section body.jpg');
   padding: 1rem;
-  margin: 1rem;
-  background-color: rgba(255, 255, 0, 0.342);
-  border-radius: 2rem;
-  font-size: small;
+  background-size: 28rem 12rem;
+  background-position-y: 0rem;
+  height: 8rem;
 }
 
-.capitoli:hover{
-  background-color: red;
-  color: white;
-  box-shadow: 0px 0px 14px 4px;
-}
-
-.active{
-  box-shadow: 0px 0px 14px 4px;
-  color: black;
-  border-radius: 2rem;
+#introBattaglie h1{
+  margin: 0;
   padding: 1rem;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  position: sticky;
-  z-index: 3;
-  width: 90%;
-  background-color: yellow;
-}
-
-.enter{
-  cursor: pointer;
-}
-
-.bigCard{
-  background-color: #ffffffbd;
-  margin: 1rem;
-  border-radius: 5rem;
+  background-color: #ffffffbf;
+  border-radius: 2rem;
   text-align: center;
+}
+
+#introBattaglie hr{
+  color: black;
+  box-shadow: 0px 7px 6px 20px;
+}
+
+#continent-europa {
+  background-image: url('./img/img_mainBattaglie/img_europa.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 7rem;
+}
+
+#continent-africa {
+  background-image: url('./img/img_mainBattaglie/img_africa.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 7rem;
+}
+
+#continent-asia {
+  background-image: url('./img/img_mainBattaglie/img_asia.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 7rem;
+}
+
+#continent-oceania {
+  background-image: url('./img/img_mainBattaglie/img_oceania.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 7rem;
+}
+
+#continent-sud-america {
+  background-image: url('./img/img_mainBattaglie/img_sud_america.avif');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 7rem;
+}
+
+#continent-nord-america {
+  background-image: url('./img/img_mainBattaglie/img_nord_america.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 7rem;
+}
+
+.continentBlock{
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #ffffffc2;
+  width: 50%;
+  border-radius: 2rem 0rem 3rem 0rem;
+  text-align: center;
+}
+
+.millenniumBlock{
+  display: none;
+}
+
+.battleCard{
+ display: none;
 }

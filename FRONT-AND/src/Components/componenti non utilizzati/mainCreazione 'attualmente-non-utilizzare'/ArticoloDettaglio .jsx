@@ -14,7 +14,7 @@ const ArticoloDettaglio = ({ items, handleModifyOpen, handleDelete }) => (
                         <p className="cardCategoria"><strong>Categoria:</strong> {item.categoria || 'N/A'}</p>
                     </div>
 
-                    <div className="d-flex justify-content-around">
+                    <div className="groupBottonCreazione">
                         <button onClick={() => handleModifyOpen(item)}>modifica</button>
                         <button onClick={() => handleDelete(item.id)}>elimina</button>
                     </div>

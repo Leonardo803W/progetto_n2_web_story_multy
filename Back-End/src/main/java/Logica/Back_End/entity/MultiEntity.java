@@ -16,14 +16,30 @@ public class MultiEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    @Column(name = "number_group")
     private int number_group;
 
-    @Enumerated(EnumType.STRING)
-    private Categoria categoria;
+    @Column(name = "categoria" ,length = 20)
+    private String categoria;
 
+    @Column(name = "titolo", length = 50)
     private String titolo;
+
+    /*
+    @Lob
+    @Column(name = "intro", length = 200)
     private String intro;
+
+    @Lob
+    @Column(name = "testo")
     private String testo;
-    private String link_;
+     */
+
+    @Lob
+    @Column(name = "link_")
+    private String link;
+
+    @Lob
+    @Column(name = "image")
     private String image;
 }
