@@ -62,7 +62,7 @@ const GlobalNavbar = ({ triggerAlert }) => {
                       <Link to = "#">Invenzioni</Link>
                     </p>
                     <p className = "notEnter">
-                      <Link to = "#">Epoche</Link>
+                      <Link to = "/Epoche">Epoche</Link>
                     </p>
                     <p className = "notEnter">
                       <Link to = "#">Continenti</Link>
@@ -85,7 +85,7 @@ const GlobalNavbar = ({ triggerAlert }) => {
                 <Link to = "#"  className = "notEnter">Invenzioni</Link>
               </p>
               <p className = "notEnter">
-                <Link to = "#"  className = "notEnter">Epoche</Link>
+                <Link to = "/Epoche"  className = "notEnter">Epoche</Link>
               </p>
               <p className = "notEnter">
                 <Link to = "#"  className = "notEnter">Continenti</Link>

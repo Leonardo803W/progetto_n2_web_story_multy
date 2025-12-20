@@ -1,7 +1,7 @@
 import GlobalNavbar from "../GlobalNavbar";
-import Battaglie from "../mainBattaglie/Battaglie";
+import HumanEpoche from '../mainEpoche/HumanEpoche';
 
-const SchermataBattaglie = () => {
+const SchermataEpoche = () => {
 
     return(
         <>
@@ -10,11 +10,11 @@ const SchermataBattaglie = () => {
             </header>
 
             <main>
-                <Battaglie/>
+                <HumanEpoche/>
             </main>
             
         </>
     )
 }
 
-export default SchermataBattaglie;
+export default SchermataEpoche;

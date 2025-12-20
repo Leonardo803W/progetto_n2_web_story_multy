@@ -112,6 +112,8 @@ const MainHomeSection2 = () => {
 
               <button className="allArrow" onClick={() => goToNextOrPrev('next')}>&gt;</button>
             </div>
+
+            <button id = "giraPagina" onClick={handleGiraPagina}>back</button>
           </section>
 
           {/* Carosello tablet */}

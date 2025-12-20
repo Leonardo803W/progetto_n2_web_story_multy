@@ -1476,19 +1476,14 @@
   font-weight: 700;
 }
 
-/*css per componenti non finiti*/
-/*ComponenteSingolo*/
-
-#bigSectionBattaglie{
-  margin-top: 6rem;
-}
+/*css mainBattaglie*/
 
 #introBattaglie{
   background-image: url('./img/img_mainBattaglie/img section body.jpg');
   padding: 1rem;
   background-size: 28rem 12rem;
   background-position-y: 0rem;
-  height: 8rem;
+  height: 6rem;
 }
 
 #introBattaglie h1{
@@ -1506,56 +1501,33 @@
 
 #continent-europa {
   background-image: url('./img/img_mainBattaglie/img_europa.jpeg');
-  background-size: cover;
-  background-position: center;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  min-height: 7rem;
 }
 
 #continent-africa {
   background-image: url('./img/img_mainBattaglie/img_africa.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  min-height: 7rem;
 }
 
 #continent-asia {
   background-image: url('./img/img_mainBattaglie/img_asia.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  min-height: 7rem;
 }
 
 #continent-oceania {
   background-image: url('./img/img_mainBattaglie/img_oceania.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  min-height: 7rem;
 }
 
 #continent-sud-america {
   background-image: url('./img/img_mainBattaglie/img_sud_america.avif');
-  background-size: cover;
-  background-position: center;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  min-height: 7rem;
 }
 
 #continent-nord-america {
   background-image: url('./img/img_mainBattaglie/img_nord_america.jpg');
-  background-size: cover;
-  background-position: center;
+}
+
+#continent-sud-america, #continent-nord-america, #continent-oceania, #continent-africa, #continent-asia, #continent-europa{
+  background-size: 27rem 13rem;
   padding: 1rem;
   margin-top: 0.5rem;
-  min-height: 7rem;
+  min-height: 10rem;
 }
 
 .continentBlock{
@@ -1568,9 +1540,57 @@
 }
 
 .millenniumBlock{
-  display: none;
+  padding: 0.5rem;
+  margin: 1rem 1rem 1rem 6rem;
+  background-color: #ffffffe3;
+  width: 50%;
+  font-size: medium;
+  border-radius: 1rem 1rem 0rem 0rem;
+  transform: rotateX(-18deg);
+  animation: millenniumBattaglie 1s ease-in;
 }
 
 .battleCard{
- display: none;
+  background-color: #ffffffbf;
+  width: 50%;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0rem 0rem 1rem 1rem;
+  box-shadow: -6px 6px 13px 1px;
+  text-align: center;
+  animation: cardBattaglie 1s ease-in;
+}
+
+.battleCard h4{
+  font-size: medium;
+  margin: 0;
+}
+
+.battleCard p{
+  font-size: small;
+  margin: 1rem;
+}
+
+/*animazioni MainBattaglie*/
+
+@keyframes millenniumBattaglie {
+  0%{
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100%{
+    transform: rotateX(-18deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cardBattaglie {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
