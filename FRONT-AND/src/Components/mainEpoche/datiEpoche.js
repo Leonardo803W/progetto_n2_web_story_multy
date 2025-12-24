@@ -1,25 +1,29 @@
 export const epoche = [
   {
     id: 1,
-    title: 'Paleolitico (Epoca della Pietra Antica)',
+    title: 'Paleolitico',
+    name: '(Epoca della Pietra Antica)',
     intro: 'Inizio della storia umana con strumenti in pietra e vita nomade.',
     testo: 'Durante il Paleolitico, l’uomo vive come cacciatore-raccoglitore, si sposta stagionalmente alla ricerca di cibo e sfrutta strumenti in pietra. Nascono le prime forme di comunicazione simbolica e arte rupestre.'
   },
   {
     id: 2,
-    title: 'Mesolitico (Età della Pietra di Transizione)',
+    title: 'Mesolitico',
+    name: '(Età della Pietra di Transizione)',
     intro: 'Fase intermedia tra Paleolitico e Neolitico con tecnologie avanzate di caccia e raccolta.',
     testo: 'Il Mesolitico vede la comparsa di strumenti più sofisticati e la specializzazione nella caccia e pesca. Inizia l’addomesticamento di alcune piante e animali e la vita resta semi-nomade.'
   },
   {
     id: 3,
-    title: 'Neolitico (Epoca della Pietra Nuova)',
+    title: 'Neolitico',
+    name: '(Epoca della Pietra Nuova)',
     intro: 'Nascita dell’agricoltura e prime comunità stabili.',
     testo: 'Con la rivoluzione neolitica, l’uomo sviluppa l’agricoltura e la pastorizia. Si costruiscono villaggi permanenti, si inventa la ceramica e nascono le prime gerarchie sociali e forme di religione organizzata.'
   },
   {
     id: 4,
-    title: 'Età dei Metalli (Calcolitico)',
+    title: 'Età dei Metalli',
+    name: '(Calcolitico)',
     intro: 'Transizione dall’uso della pietra a quello dei metalli.',
     testo: 'Il Calcolitico è caratterizzato dall’introduzione del rame e dei primi utensili metallici. Le comunità diventano più complesse e compaiono le prime tombe monumentali e centri rituali.'
   },
@@ -93,30 +97,30 @@ export const epoche = [
     id: 16,
     title: 'Età Contemporanea',
     intro: 'Dall’industrializzazione alla globalizzazione.',
-    testo: 'Dal XIX secolo ai giorni nostri, grandi guerre mondiali, rivoluzioni politiche, progresso tecnologico e globale caratterizzano l’età contemporanea. L’uomo esplora nuovi territori, sviluppa la scienza e cambia radicalmente lo stile di vita e le strutture sociali.'
+    testo: 'Dal XIX secolo ai giorni nostri, grandi guerre mondiali, rivoluzioni politiche, progresso tecnologico e globale caratterizzano l’età contemporanea.'
   },
   {
     id: 17,
     title: 'Età della Guerra Mondiale',
     intro: 'Periodo delle due guerre mondiali.',
-    testo: 'Dal 1914 al 1945, il mondo affronta conflitti su scala globale. Si sviluppano nuove armi, strategie militari e la geopolitica cambia radicalmente. Le due guerre mondiali segnano profondamente società, economia e politica.'
+    testo: 'Dal 1914 al 1945, il mondo affronta conflitti su scala globale. Si sviluppano nuove armi, strategie militari e la geopolitica cambia radicalmente.'
   },
   {
     id: 18,
     title: 'Guerra Fredda',
     intro: 'Periodo di tensione tra blocchi contrapposti.',
-    testo: 'Dal 1947 al 1991, Stati Uniti e Unione Sovietica dominano la scena mondiale. Conflitti indiretti, competizione tecnologica e ideologica definiscono questa fase storica senza scontri diretti tra le superpotenze.'
+    testo: 'Dal 1947 al 1991, Stati Uniti e Unione Sovietica dominano la scena mondiale.'
   },
   {
     id: 19,
     title: 'Era Post-Guerra Fredda',
     intro: 'Dal 1991 alla globalizzazione.',
-    testo: 'Dopo la fine della Guerra Fredda, si sviluppa un mondo globalizzato con economie interconnesse, innovazioni tecnologiche e nuovi conflitti regionali. Nascono organizzazioni internazionali e l’informazione digitale cambia il modo di comunicare.'
+    testo: 'Dopo la fine della Guerra Fredda, si sviluppa un mondo globalizzato con economie interconnesse e innovazioni tecnologiche.'
   },
   {
     id: 20,
     title: 'Età Contemporanea Avanzata',
     intro: 'Secolo XXI e l’era digitale.',
-    testo: 'Il XXI secolo è caratterizzato dalla rivoluzione digitale, globalizzazione, problemi climatici e pandemia. Tecnologia, scienza e cultura cambiano rapidamente, influenzando società, economia e politica su scala globale.'
+    testo: 'Il XXI secolo è caratterizzato dalla rivoluzione digitale, globalizzazione, problemi climatici e pandemia.'
   }
 ];

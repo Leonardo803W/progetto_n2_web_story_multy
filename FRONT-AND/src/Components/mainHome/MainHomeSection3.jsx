@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const cards = [
   { id: 1,
@@ -67,7 +68,10 @@ const MainHomeSection3 = () => {
                   <button onClick={() => handleClickArticole(4)} className={isActive ? 'singole-button' : 'd-none'}>
                     indietro
                   </button>
-                  <button className={isActive ? 'singole-button' : 'd-none'}>Scopri</button>
+
+                  <Link to = {`/${articolo.title}`} className = 'w-75'>
+                    <button className={isActive ? 'singole-button' : 'd-none'}>Scopri</button>
+                  </Link>
                 </div>
               </div>
             );

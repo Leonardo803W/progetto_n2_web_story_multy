@@ -864,7 +864,7 @@
 }
 
 .singole-button{
-  width: 35%;
+  width: 50%;
   border-radius: 1rem;
   border-color: #ff5c5c;
   background-color: #9dbef94f;
@@ -1593,4 +1593,170 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/*css mainEpoche*/
+
+#introBigSectionEpoche{
+  background-image: url(./img/img_mainEpoche/titolo-img.jpg);
+  padding: 1rem;
+  background-size: 27rem 9rem;
+  min-height: 8rem;
+}
+
+#introBigSectionEpoche h1{
+  margin: 0;
+  padding: 1rem;
+  background-color: #ffffffbf;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.epoche-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+#epoca-paleolitico {
+  background-image: url(./img/img_mainEpoche/epoca-paleolitico.jpg);
+}
+
+#epoca-mesolitico {
+  background-image: url(./img/img_mainEpoche/epoca-mesolitico.jpg);
+}
+
+#epoca-neolitico {
+  background-image: url(./img/img_mainEpoche/epoca-neolitico.jpg);
+}
+
+#epoca-età-dei-metalli {
+  background-image: url(./img/img_mainEpoche/epoca-eta-dei-metalli.jpg);
+}
+
+#epoca-età-del-bronzo {
+  background-image: url(./img/img_mainEpoche/epoca-eta-del-bronzo.jpg);
+}
+
+#epoca-età-del-ferro {
+  background-image: url(./img/img_mainEpoche/epoca-eta-del-ferro.jpg);
+}
+
+#epoca-antichità-classica {
+  background-image: url(./img/img_mainEpoche/epoca-antichita-classica.jpg);
+}
+
+#epoca-alto-medioevo {
+  background-image: url(./img/img_mainEpoche/epoca-alto-medioevo.jpg);
+}
+
+#epoca-basso-medioevo {
+  background-image: url(./img/img_mainEpoche/epoca-basso-medioevo.jpg);
+}
+
+#epoca-rinascimento {
+  background-image: url(./img/img_mainEpoche/epoca-rinascimento.jpg);
+}
+
+#epoca-età-delle-scoperte {
+  background-image: url(./img/img_mainEpoche/epoca-eta-delle-scoperte.jpg);
+}
+
+#epoca-età-moderna {
+  background-image: url(./img/img_mainEpoche/epoca-eta-moderna.jpg);
+}
+
+#epoca-illuminismo {
+  background-image: url(./img/img_mainEpoche/epoca-illuminismo.jpg);
+}
+
+#epoca-età-delle-rivoluzioni {
+  background-image: url(./img/img_mainEpoche/epoca-eta-delle-rivoluzioni.jpg);
+}
+
+#epoca-rivoluzione-industriale {
+  background-image: url(./img/img_mainEpoche/epoca-rivoluzione-industriale.jpg);
+}
+
+#epoca-età-contemporanea {
+  background-image: url(./img/img_mainEpoche/epoca-eta-contemporanea.jpg);
+}
+
+#epoca-età-della-guerra-mondiale {
+  background-image: url(./img/img_mainEpoche/epoca-eta-della-guerra-mondiale.jpg);
+}
+
+#epoca-guerra-fredda {
+  background-image: url(./img/img_mainEpoche/epoca-guerra-fredda.jpg);
+}
+
+#epoca-era-post-guerra-fredda {
+  background-image: url(./img/img_mainEpoche/epoca-era-post-guerra-fredda.jpg);
+}
+
+#epoca-età-contemporanea-avanzata {
+  background-image: url(./img/img_mainEpoche/epoca-eta-contemporanea-avanzata.jpg);
+}
+
+.introEpoca{
+  margin: 0.5rem;
+  background-color: #ffffffbf;
+  padding: 0.5rem;
+  border-radius: 1rem 0rem 1rem 0rem;
+  animation: text 3s ease-in-out;
+}
+
+.titoloTesto{
+  margin: 0.5rem;
+  background-color: #ffffffbf;
+  padding: 0.5rem;
+  border-radius: 1rem 0rem 1rem 0rem;
+  animation: text 3s ease-in-out;
+}
+
+@keyframes text {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes activeEpoca {
+  0%{
+    min-width: 12rem;
+  }
+  100%{
+    min-width: 30rem;
+  }
+}
+
+@keyframes inactiveEpoca {
+  0%{
+    min-width: 30rem;
+  }
+  100%{
+    min-width: 12rem;
+  }
+}
+
+.activeEpoca{
+  min-width: 30rem;
+  text-align: center;
+  padding: 1rem 1rem 0rem 1rem;
+  min-height: 40rem;
+  background-size: 31rem 20rem;
+  box-shadow: 8px 0px 15px 4px;
+  animation: activeEpoca 1s ease-in;
+}
+
+.inactiveEpoca{
+  min-width: 12rem;
+  text-align: center;
+  padding: 1rem 1rem 0rem 1rem;
+  min-height: 40rem;
+  background-size: 31rem 20rem;
+  box-shadow: 8px 0px 15px 4px;
+  animation: inactiveEpoca 1s ease-out;
 }
