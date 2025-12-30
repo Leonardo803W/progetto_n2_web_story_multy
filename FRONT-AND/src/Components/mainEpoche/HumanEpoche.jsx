@@ -21,8 +21,7 @@ const HumanEpoche = () => {
             </div>
 
             <section className="epoche-scroll">
-                {epoche.map((epoca) => {
-                    return (
+                {epoche.map((epoca) => (
                         <div
                             key={epoca.id}
                             id={`epoca-${epoca.title.toLowerCase().replace(/\s+/g, '-')}`}
@@ -30,13 +29,12 @@ const HumanEpoche = () => {
                             className={activeEpoca.includes(epoca.id) ? 'activeEpoca' : 'inactiveEpoca'}
                         >
                             <div>
-                                <h4 className = {activeEpoca.includes(epoca.id) ? 'titoloTesto' : 'introEpoca'}>{epoca.title} {epoca.name}</h4>
+                                <h4 className = {activeEpoca.includes(epoca.id) ? 'titoloTesto' : 'titoloTesto'}>{epoca.title} {epoca.name}</h4>
                                 <p className = {activeEpoca.includes(epoca.id) ? 'd-none' : 'introEpoca'}>{epoca.intro}</p>
                                 <p className = {activeEpoca.includes(epoca.id) ? 'titoloTesto' : 'd-none'}>{epoca.testo}</p>
                             </div>
                         </div>
-                    );
-                })}
+                ))}
             </section>
         </section>
     );

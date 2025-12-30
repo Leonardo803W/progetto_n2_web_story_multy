@@ -5,7 +5,10 @@ body {
   padding: 0;
 }
 
-#bigSectionBattaglie, #bigSectionEpoche{
+#bigSectionBattaglie, 
+#bigSectionEpoche, 
+#bigSectionInvenzioni,
+#bigSectionContinenti{
   margin-top: 6rem;
 }
 

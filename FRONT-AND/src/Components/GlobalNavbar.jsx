@@ -58,14 +58,17 @@ const GlobalNavbar = ({ triggerAlert }) => {
                     <p className = "enter" onClick = {() => handelAlert(1)}>
                       <Link to = '/Battaglie'>Battaglie</Link>
                     </p>
-                    <p className = "notEnter">
-                      <Link to = "#">Invenzioni</Link>
+                    <p className = "enter">
+                      <Link to = "/Invenzioni">Invenzioni</Link>
                     </p>
-                    <p className = "notEnter">
+                    <p className = "enter">
                       <Link to = "/Epoche">Epoche</Link>
                     </p>
-                    <p className = "notEnter">
-                      <Link to = "#">Continenti</Link>
+                    <p className = "enter">
+                      <Link to = "/Continenti">Continenti</Link>
+                    </p>
+                    <p className = "enter">
+                      <Link to = "/Divulgatori">Divulgatori</Link>
                     </p>
               </Offcanvas.Body>
             </Offcanvas>
@@ -81,14 +84,17 @@ const GlobalNavbar = ({ triggerAlert }) => {
               <p className = "enter"  onClick = {() => handlemenuProfile(2)}>
                 <Link to = '/Battaglie'>Battaglie</Link>
               </p>
-              <p className = "notEnter">
-                <Link to = "#"  className = "notEnter">Invenzioni</Link>
+              <p className = "enter">
+                <Link to = "/Invenzioni">Invenzioni</Link>
               </p>
-              <p className = "notEnter">
-                <Link to = "/Epoche"  className = "notEnter">Epoche</Link>
+              <p className = "enter">
+                <Link to = "/Epoche">Epoche</Link>
               </p>
-              <p className = "notEnter">
-                <Link to = "#"  className = "notEnter">Continenti</Link>
+              <p className = "enter">
+                <Link to = "/Continenti">Continenti</Link>
+              </p>
+              <p className = "enter">
+                <Link to = "/Divulgatori">Divulgatori</Link>
               </p>
             </div>
 

@@ -10,14 +10,14 @@ npm run build
 # anteprima build
 npm run preview
 
-# per poter cambiare il browser per poter aprire il progetto 
+# in caso si voglia cambiare il browser quando si apre il progetto, specificare il tipo di browser e poi il progetto con il comando di avvio, emepio:
 BROWSER=chrome npm run dev
 
 # per chiudere il runner di bash
 
 Ctrl + c
 
---------------------------------------------------------------------------------------------------------------------------------------------------------- 
+------------------------------------------
 
 dipendenze utilizzate lato Front-end:
 
@@ -40,3 +40,48 @@ Scopo: Bootstrap è un framework CSS per lo sviluppo di siti web e applicazioni 
 Link Documentation: https://react-bootstrap.github.io
 Installazione: npm install react-bootstrap
 Scopo: React Bootstrap è una libreria che integra Bootstrap con React. Fornisce componenti Bootstrap come componenti React, facilitando l'uso di Bootstrap in applicazioni React.
+
+
+-----------------------
+
+# best practices:
+
+{
+  /*
+    target="_blank": l'utente resta sul sito e la fonte si apre in una nuova scheda
+    re="noopener noreffer"
+    noopener: impedisce alla pagina esterna di accedere a windo.opener perevitare attacchi di tipo tabnabbing
+    noreferrer: non invia informazioni sulla pagina di provenienzq e il sito esterno non sa da dove arriva l'utente cio protegge la privacy dell'utente
+  */
+}
+
+
+# spiegazioni di alcuni attributi dei iframe
+
+- sandbox
+Applica restrizioni di sicurezza al contenuto dell’iframe.
+Senza attributo, il contenuto esterno può eseguire script, cambiare pagina padre ecc.
+"allow-scripts allow-same-origin" permette solo:
+allow-scripts → eseguire JavaScript
+allow-same-origin → trattare il contenuto come proveniente dalla stessa origine (utile per cookie e sessioni)
+
+- allow
+Definisce permessi moderni per l’iframe:
+fullscreen → può andare a schermo intero
+camera → accesso alla videocamera
+microphone → accesso al microfono
+geolocation → accesso alla posizione geografica
+
+- allowfullscreen
+Attributo booleano che permette di ingrandire l’iframe a schermo intero.
+Alcuni browser richiedono sia allow="fullscreen" sia allowfullscreen.
+
+- loading
+Controlla il caricamento dell’iframe:
+lazy → carica l’iframe solo quando entra in viewport, migliora performance.
+eager (default) → carica subito.
+
+- referrerpolicy
+Controlla quali informazioni sulla pagina di provenienza (referrer) vengono inviate al sito esterno:
+no-referrer → nessuna informazione viene inviata
+Protegge privacy e sicurezza.
