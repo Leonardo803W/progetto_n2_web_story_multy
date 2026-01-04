@@ -9,7 +9,7 @@ const SchermataBattaglie = () => {
                 <GlobalNavbar/>
             </header>
 
-            <main>
+            <main id = "schermataBataglieMain">
                 <Battaglie/>
             </main>
             

@@ -5,10 +5,44 @@ body {
   padding: 0;
 }
 
+#schermataBataglieMain,
+#CardMainB{
+  min-height: 46rem;
+}
+
 #bigSectionBattaglie, 
 #bigSectionEpoche, 
 #bigSectionInvenzioni,
-#bigSectionContinenti{
+#bigSectionContinenti,
+#BigSectionDivulgatori{
   margin-top: 6rem;
+  padding: 0.5rem;
 }
 
+#bigSectionBattaglie h1, 
+#bigSectionEpoche h1, 
+#bigSectionInvenzioni h1,
+#bigSectionContinenti h1,
+#BigSectionDivulgatori h1{
+  margin: auto;
+  background-color: #ffffffd9;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 3rem 0rem 3rem 0rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  font-size: medium;
+  font-weight: 600;
+}
+
+p{
+  margin: 0;
+  font-size: x-small;
+}
+
+a{
+  text-decoration: none;
+  font-size: x-small;
+}

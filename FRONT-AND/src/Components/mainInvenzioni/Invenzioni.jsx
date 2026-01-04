@@ -24,6 +24,7 @@ const Invenzioni = () => {
         <div key={item.id} className = 'bigArticole'>
           <div className = 'epocheInvenzioni' onClick={() => handelInvenzione(item.id)}>
             <h3>{item.title}</h3>
+            <hr />
           </div>
           
             <div className = {activeInvention.includes(item.id) ? 'groupInvenzioni' : 'd-none'}>

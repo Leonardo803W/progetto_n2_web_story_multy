@@ -9,7 +9,7 @@ const SchermataInvenzioni = () => {
                 <GlobalNavbar/>
             </header>
 
-            <main>
+            <main id = "schermataInvenzioneMain">
                 <Invenzioni/>
             </main>
             

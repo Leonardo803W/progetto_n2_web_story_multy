@@ -1,6 +1,18 @@
+import { useState } from "react";
 import { continenti } from "./datiContinenti";
 
 const Continenti = () => {
+
+    const [activeContinents, setActiveContinents] = useState([]);
+
+    const handelEpoca = (item) => {
+
+        setActiveContinents(prev => 
+            prev.includes(item)
+                ? prev.filter(id => id !== item)
+                : [...prev, item]
+        )
+    }
 
     return(
         <>
@@ -11,10 +23,10 @@ const Continenti = () => {
 
                 <section>
                     {continenti.map((item) => (
-                        <article key = {item.id} id={`continente-${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                        <article key = {item.id} className={activeContinents.includes(item.id) ? 'activeGround' : 'unactiveGround'} id={`continente-${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
                             <div className = "cardContinent">
-                                <h3>{item.title}</h3>
-                                <div>
+                                <h3 onClick={() => handelEpoca(item.id)}>{item.title}</h3>
+                                <div className={activeContinents.includes(item.id) ? 'd-block' : 'd-none'}>
                                     <p>{item.testo}</p>
                                     <a href={item.link} target="_blank" rel="noopener noreferrer">
                                         {item.link}

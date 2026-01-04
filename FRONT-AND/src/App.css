@@ -1,53 +1,3 @@
-/*CSS per alert personalizzati*/
-
-.customAlertOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1050;
-}
-
-.customAlertOverlay > * {
-  z-index: 1060;
-}
-
-.dark-overlay-wrapper {
-  pointer-events: none;
-  filter: blur(4px) brightness(0.5);
-  position: absolute;
-}
-
-#alertBattaglia{
-  position: absolute;
-  z-index: 3;
-  left: 3rem;
-  top: 12rem;
-  background-color: #c3d9cce0;
-  border-radius: 1rem;
-  width: 80%;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0px 0px 18px 12px;
-}
-
-#alertBattaglia p{
-  font-size: small;
-  font-weight: 700;
-  margin: 0;
-  padding: 3rem;
-}
-
-#imgAlertBattaglia1, #imgAlertBattaglia2{
-  width: 100%;
-  transform: scaleX(-1);
-}
-
 /*CSS per GlobalNavbar*/
 
 #navbar{
@@ -80,14 +30,14 @@
 }
 
 #offCanvsBody p{
-  margin: 0;
-  padding: 1rem;
   border-bottom: black 1px solid;
+  margin-bottom: 1rem;
 }
 
 #offCanvsBody a{
+  font-size: x-large;
+  padding-left: 1rem;
   color: white;
-  text-decoration: unset;
 }
 
 .notEnter{
@@ -98,6 +48,7 @@
   color: rgb(0 0 0);
   margin: 0%;
   background: #ffffff99;
+  font-size: xx-large;
 }
 
 #navbar-item-desktop{
@@ -1312,6 +1263,640 @@
   }
 }
 
+/*css mainBattaglie*/
+
+#schermataBataglieMain{
+  background-color: #e5c996;
+}
+
+#titleBattaglie{
+  background-image: url('./img/img_mainBattaglie/img section body.jpg');
+  padding: 1rem;
+  background-size: 28rem 12rem;
+  background-position-y: 0rem;
+  height: 6rem;
+  text-align: center;
+}
+
+.introMainBattaglie{
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.introMainBattaglie p{
+  padding: 1rem;
+  background-color: #ffffffd1;
+  border-radius: 1rem;
+}
+
+.firstP{
+  animation: firstP 2s ease-in;
+}
+
+.cssVideoMomentaneo{
+  background-color: white;
+  margin: 2rem;
+  padding: 8rem;
+  animation: firstVideo 2s ease-in;
+}
+
+.secondP{
+  animation: secondP 2s ease-in;
+}
+
+.buttonShowBattlesOn{
+  display: block;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: red;
+  border-color: #8f4b4b;
+  width: 50%;
+}
+
+.buttonShowBattlesOff{
+  background-color: red;
+  border-color: #9d2f2f;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 22rem;
+}
+
+.articleBattles{
+  animation: articleBattles 1s ease-out;
+}
+
+#continent-europa {
+  background-image: url('./img/img_mainBattaglie/img_europa.jpeg');
+}
+
+#continent-africa {
+  background-image: url('./img/img_mainBattaglie/img_africa.jpg');
+}
+
+#continent-asia {
+  background-image: url('./img/img_mainBattaglie/img_asia.jpg');
+}
+
+#continent-oceania {
+  background-image: url('./img/img_mainBattaglie/img_oceania.jpg');
+}
+
+#continent-sud-america {
+  background-image: url('./img/img_mainBattaglie/img_sud_america.avif');
+}
+
+#continent-nord-america {
+  background-image: url('./img/img_mainBattaglie/img_nord_america.jpg');
+}
+
+#continent-sud-america, 
+#continent-nord-america, 
+#continent-oceania, 
+#continent-africa, 
+#continent-asia, 
+#continent-europa{
+  background-size: 27rem 13rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 10rem;
+}
+
+.continentBlock{
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #ffffffc2;
+  width: 50%;
+  border-radius: 2rem 0rem 3rem 0rem;
+  text-align: center;
+}
+
+.millenniumBlock{
+  padding: 0.5rem;
+  margin: 1rem 1rem 1rem 6rem;
+  background-color: #ffffffe3;
+  width: 50%;
+  font-size: medium;
+  border-radius: 1rem 1rem 0rem 0rem;
+  transform: rotateX(-18deg);
+  animation: millenniumBattaglie 1s ease-in;
+}
+
+.battleCard{
+  background-color: #ffffffbf;
+  width: 50%;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0rem 0rem 1rem 1rem;
+  box-shadow: -6px 6px 13px 1px;
+  text-align: center;
+  animation: cardBattaglie 1s ease-in;
+}
+
+.battleCard h4{
+  font-size: medium;
+  margin: 0;
+}
+
+.battleCard p{
+  font-size: small;
+  margin: 1rem;
+}
+
+#cardMainB{
+  margin-top: 6rem;
+  background-color: #d9aa8e;
+}
+
+.cardIntroB{
+  padding: 1rem;
+  background-color: #ffffffd9;
+  border-radius: 1rem 0rem 1rem 1rem;
+}
+
+#cardB{
+  padding: 3rem;
+  background-size: cover;
+  background-position-y: -4rem;
+  text-align: center;
+}
+
+#cardContentB{
+  padding: 2rem;
+}
+
+.cardTextB {
+  line-height: 1.6;
+  background-color: #ffffffd9;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#cardImgTestoB {
+  width: 90%;
+  height: 15rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+/*animazioni MainBattaglie*/
+
+@keyframes firstP {
+  0%{
+    transform: rotateX(45deg);
+    opacity: 0;
+  }
+  100%{
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes firstVideo {
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes secondP {
+  0%{
+    transform: skewX(35deg) translateX(+100%);
+    opacity: 0;
+  }
+  50%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes articleBattles {
+  0%{
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes millenniumBattaglie {
+  0%{
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100%{
+    transform: rotateX(-18deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cardBattaglie {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*css mainEpoche*/
+
+#schermataEpocheMain{
+  background-color: #5553d3;
+}
+
+#introBigSectionEpoche{
+  background-image: url(./img/img_mainEpoche/titolo-img.jpg);
+  padding: 1rem;
+  background-size: 27rem 9rem;
+  min-height: 8rem;
+}
+
+.epoche-scroll {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+#epoca-paleolitico {
+  background-image: url(./img/img_mainEpoche/epoca-paleolitico.jpg);
+}
+
+#epoca-mesolitico {
+  background-image: url(./img/img_mainEpoche/epoca-mesolitico.jpg);
+}
+
+#epoca-neolitico {
+  background-image: url(./img/img_mainEpoche/epoca-neolitico.jpg);
+}
+
+#epoca-età-dei-metalli {
+  background-image: url(./img/img_mainEpoche/epoca-eta-dei-metalli.jpg);
+}
+
+#epoca-età-del-bronzo {
+  background-image: url(./img/img_mainEpoche/epoca-eta-del-bronzo.jpg);
+}
+
+#epoca-età-del-ferro {
+  background-image: url(./img/img_mainEpoche/epoca-eta-del-ferro.jpg);
+}
+
+#epoca-antichità-classica {
+  background-image: url(./img/img_mainEpoche/epoca-antichita-classica.jpg);
+}
+
+#epoca-alto-medioevo {
+  background-image: url(./img/img_mainEpoche/epoca-alto-medioevo.jpg);
+}
+
+#epoca-basso-medioevo {
+  background-image: url(./img/img_mainEpoche/epoca-basso-medioevo.jpg);
+}
+
+#epoca-rinascimento {
+  background-image: url(./img/img_mainEpoche/epoca-rinascimento.jpg);
+}
+
+#epoca-età-delle-scoperte {
+  background-image: url(./img/img_mainEpoche/epoca-eta-delle-scoperte.jpg);
+}
+
+#epoca-età-moderna {
+  background-image: url(./img/img_mainEpoche/epoca-eta-moderna.jpg);
+}
+
+#epoca-illuminismo {
+  background-image: url(./img/img_mainEpoche/epoca-illuminismo.jpg);
+}
+
+#epoca-età-delle-rivoluzioni {
+  background-image: url(./img/img_mainEpoche/epoca-eta-delle-rivoluzioni.jpg);
+}
+
+#epoca-rivoluzione-industriale {
+  background-image: url(./img/img_mainEpoche/epoca-rivoluzione-industriale.jpg);
+}
+
+#epoca-età-contemporanea {
+  background-image: url(./img/img_mainEpoche/epoca-eta-contemporanea.jpg);
+}
+
+#epoca-età-della-guerra-mondiale {
+  background-image: url(./img/img_mainEpoche/epoca-eta-della-guerra-mondiale.jpg);
+}
+
+#epoca-guerra-fredda {
+  background-image: url(./img/img_mainEpoche/epoca-guerra-fredda.jpg);
+}
+
+#epoca-era-post-guerra-fredda {
+  background-image: url(./img/img_mainEpoche/epoca-era-post-guerra-fredda.jpg);
+}
+
+#epoca-età-contemporanea-avanzata {
+  background-image: url(./img/img_mainEpoche/epoca-eta-contemporanea-avanzata.jpg);
+}
+
+.introEpoca{
+  margin: 0.5rem;
+  background-color: #ffffffbf;
+  padding: 0.5rem;
+  border-radius: 1rem 0rem 1rem 0rem;
+  animation: text 3s ease-in-out;
+}
+
+.titoloTesto{
+  margin: 0.5rem;
+  background-color: #ffffffbf;
+  padding: 0.5rem;
+  border-radius: 1rem 0rem 1rem 0rem;
+  animation: text 3s ease-in-out;
+}
+
+.activeEpoca{
+  min-width: 30rem;
+  text-align: center;
+  padding: 1rem 1rem 0rem 1rem;
+  min-height: 40rem;
+  background-size: 31rem 20rem;
+  box-shadow: 8px 9px 15px 5px;
+  margin: 0.5rem;
+  animation: activeEpoca 1s ease-in;
+}
+
+.inactiveEpoca{
+  min-width: 12rem;
+  text-align: center;
+  padding: 1rem 1rem 0rem 1rem;
+  min-height: 40rem;
+  background-size: 31rem 20rem;
+  box-shadow: 8px 9px 15px 5px;
+  margin: 0.5rem;
+  animation: inactiveEpoca 1s ease-out;
+}
+
+/*animazioni mainEpoche*/
+
+@keyframes text {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes activeEpoca {
+  0%{
+    min-width: 12rem;
+  }
+  100%{
+    min-width: 30rem;
+  }
+}
+
+@keyframes inactiveEpoca {
+  0%{
+    min-width: 30rem;
+  }
+  100%{
+    min-width: 12rem;
+  }
+}
+
+/*css mainInvenzioni*/
+
+#schermataInvenzioneMain{
+  background-color: #673AB7;
+}
+
+#introBigSectionInvenzioni{
+  background-image: url(./img/backgroundImgSection3\ invenzioni.jpg);
+  padding: 2rem;
+  background-size: cover;
+  background-position-y: -4rem;
+  text-align: center;
+}
+
+.epocheInvenzioni{
+  background-image: url(./img/img_mainInvenzioni/img_epoche.webp);
+  background-size: cover;
+  background-position-y: -3rem;
+  margin: 0;
+  padding: 3rem;
+  text-align: center;
+}
+
+.groupInvenzioni{
+  display: flex;
+  overflow: scroll;
+}
+
+.invenzioni{
+  background-image: url(./img/img_mainInvenzioni/img_invenzioni.jpeg);
+  padding: 2rem;
+  background-size: cover;
+  min-height: 17rem;
+  margin: 0.5rem;
+}
+
+.cardInvenzioni, .epocheInvenzioni h3 {
+  background-color: #ffffffe8;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.bigArticole{
+  box-shadow: 0px -8px 22px 4px;
+  margin-top: 0.3rem;
+}
+
+/*css continenti*/
+
+#schermataContinentiMain{
+  background-color: #60c4ff;
+}
+
+.activeGround{
+  background-size: 26rem 13rem;
+  background-position-y: -2rem;
+}
+
+.unactiveGround{
+  background-size: 26rem 12rem;
+  background-position-y: 0rem;
+}
+
+#introContinenti{
+  background-image: url(./img/backgroundImgSection3\ continenti.jpg);
+  padding: 2rem;
+  background-size: cover;
+  background-position-y: -3rem;
+  text-align: center;
+}
+
+#continente-africa{
+  background-image: url(./img/img_continent/africa.webp);
+}
+
+#continente-europa{
+  background-image: url(./img/img_continent/europa.webp);
+}
+
+#continente-asia{
+  background-image: url(./img/img_continent/asia.jpg);
+}
+
+#continente-america-del-nord{
+  background-image: url(./img/img_continent/nord-america.jpeg);
+}
+
+#continente-america-del-sud{
+  background-image: url(./img/img_continent/sud-america.png);
+}
+
+#continente-oceania{
+  background-image: url(./img/img_continent/oceania.avif);
+}
+
+#continente-antartide{
+  background-image: url(./img/img_continent/antartide.webp);
+}
+
+#continente-africa,
+#continente-europa,
+#continente-asia,
+#continente-america-del-nord,
+#continente-america-del-sud,
+#continente-oceania,
+#continente-antartide{
+  padding: 2rem;
+  box-shadow: 0px 0px 21px 2px;
+  margin: 0.5rem;
+}
+
+.cardContinent h3, .cardContinent div{
+  text-align: center;
+  background-color: #ffffffd1;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 11px 19px 2px;
+}
+
+#groupVideoContinent{
+  background-image: url(./img/backgroundImgSection3\ intro\ sezioni.jpg);
+  padding: 2rem;
+  text-align: center;
+  background-size: cover;
+  margin-top: 0.5rem;
+  background-position-x: -30rem;
+}
+
+#groupVideoContinent p{
+  background-color: #ffffffd1;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+#groupVideoContinent iframe{
+  width: 100%;
+  padding: 0.5rem;
+  background-color: black;
+  height: 14rem;
+}
+
+/*css Divulgatori*/
+
+#schermataDivulgatoriMain{
+  background-color: #432412;
+}
+
+#introSectionDivulgatori{
+  background-image: url(./img/divulgatori/vecchio-libro-aperto-per-halloween_135176-343.jpg);
+  background-size: cover;
+  min-height: 5rem;
+  background-position-x: 0rem;
+  background-position-y: -3rem;
+  padding: 1rem;
+}
+
+.articoleDivulgatori{
+  background-color: #ffffffe8;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 1rem;
+  box-shadow: -16px -5px 15px 0px;
+  border-radius: 1rem;
+}
+
+.introCard{ 
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgCard{
+  width: 50%;
+}
+
+.contenutoCard{
+  width: 40%;
+}
+
+.fontiPrincipaleCard{
+  margin: 1rem 0rem 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fontiPrincipaleCard > p{
+  width: 40%;
+  background-color: red;
+}
+
+.divulgatoriCanaliYoutube{
+  background-color: black;
+  padding: 1rem;
+}
+
+.articoleCardCanali{
+  background-color: white;
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  margin: 1rem;
+  text-align: center;
+}
+
+.introCardCanali{
+  background-color: red;
+  width: 20%;
+}
+
+.articoleCardCanali img{
+  width: 100%;
+  height: 4rem;
+}
+
+.contenutoCardCanali{
+  width: 60%;
+  padding: 0.5rem;
+  margin-right: 2rem;
+}
+
 /*css Creazione*/
 
 .mainCreazione{
@@ -1474,441 +2059,4 @@
   background-color: #b3b3b3;
   border-radius: 2rem;
   font-weight: 700;
-}
-
-/*css mainBattaglie*/
-
-#introBattaglie{
-  background-image: url('./img/img_mainBattaglie/img section body.jpg');
-  padding: 1rem;
-  background-size: 28rem 12rem;
-  background-position-y: 0rem;
-  height: 6rem;
-}
-
-#introBattaglie h1{
-  margin: 0;
-  padding: 1rem;
-  background-color: #ffffffbf;
-  border-radius: 2rem;
-  text-align: center;
-}
-
-#introBattaglie hr{
-  color: black;
-  box-shadow: 0px 7px 6px 20px;
-}
-
-#continent-europa {
-  background-image: url('./img/img_mainBattaglie/img_europa.jpeg');
-}
-
-#continent-africa {
-  background-image: url('./img/img_mainBattaglie/img_africa.jpg');
-}
-
-#continent-asia {
-  background-image: url('./img/img_mainBattaglie/img_asia.jpg');
-}
-
-#continent-oceania {
-  background-image: url('./img/img_mainBattaglie/img_oceania.jpg');
-}
-
-#continent-sud-america {
-  background-image: url('./img/img_mainBattaglie/img_sud_america.avif');
-}
-
-#continent-nord-america {
-  background-image: url('./img/img_mainBattaglie/img_nord_america.jpg');
-}
-
-#continent-sud-america, 
-#continent-nord-america, 
-#continent-oceania, 
-#continent-africa, 
-#continent-asia, 
-#continent-europa{
-  background-size: 27rem 13rem;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  min-height: 10rem;
-}
-
-.continentBlock{
-  margin: 0;
-  padding: 0.5rem;
-  background-color: #ffffffc2;
-  width: 50%;
-  border-radius: 2rem 0rem 3rem 0rem;
-  text-align: center;
-}
-
-.millenniumBlock{
-  padding: 0.5rem;
-  margin: 1rem 1rem 1rem 6rem;
-  background-color: #ffffffe3;
-  width: 50%;
-  font-size: medium;
-  border-radius: 1rem 1rem 0rem 0rem;
-  transform: rotateX(-18deg);
-  animation: millenniumBattaglie 1s ease-in;
-}
-
-.battleCard{
-  background-color: #ffffffbf;
-  width: 50%;
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 0rem 0rem 1rem 1rem;
-  box-shadow: -6px 6px 13px 1px;
-  text-align: center;
-  animation: cardBattaglie 1s ease-in;
-}
-
-.battleCard h4{
-  font-size: medium;
-  margin: 0;
-}
-
-.battleCard p{
-  font-size: small;
-  margin: 1rem;
-}
-
-/*animazioni MainBattaglie*/
-
-@keyframes millenniumBattaglie {
-  0%{
-    transform: rotateX(90deg);
-    opacity: 0;
-  }
-  100%{
-    transform: rotateX(-18deg);
-    opacity: 1;
-  }
-}
-
-@keyframes cardBattaglie {
-  0%{
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/*css mainEpoche*/
-
-#introBigSectionEpoche{
-  background-image: url(./img/img_mainEpoche/titolo-img.jpg);
-  padding: 1rem;
-  background-size: 27rem 9rem;
-  min-height: 8rem;
-}
-
-#introBigSectionEpoche h1{
-  margin: 0;
-  padding: 1rem;
-  background-color: #ffffffbf;
-  border-radius: 2rem;
-  text-align: center;
-}
-
-.epoche-scroll {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-}
-
-#epoca-paleolitico {
-  background-image: url(./img/img_mainEpoche/epoca-paleolitico.jpg);
-}
-
-#epoca-mesolitico {
-  background-image: url(./img/img_mainEpoche/epoca-mesolitico.jpg);
-}
-
-#epoca-neolitico {
-  background-image: url(./img/img_mainEpoche/epoca-neolitico.jpg);
-}
-
-#epoca-età-dei-metalli {
-  background-image: url(./img/img_mainEpoche/epoca-eta-dei-metalli.jpg);
-}
-
-#epoca-età-del-bronzo {
-  background-image: url(./img/img_mainEpoche/epoca-eta-del-bronzo.jpg);
-}
-
-#epoca-età-del-ferro {
-  background-image: url(./img/img_mainEpoche/epoca-eta-del-ferro.jpg);
-}
-
-#epoca-antichità-classica {
-  background-image: url(./img/img_mainEpoche/epoca-antichita-classica.jpg);
-}
-
-#epoca-alto-medioevo {
-  background-image: url(./img/img_mainEpoche/epoca-alto-medioevo.jpg);
-}
-
-#epoca-basso-medioevo {
-  background-image: url(./img/img_mainEpoche/epoca-basso-medioevo.jpg);
-}
-
-#epoca-rinascimento {
-  background-image: url(./img/img_mainEpoche/epoca-rinascimento.jpg);
-}
-
-#epoca-età-delle-scoperte {
-  background-image: url(./img/img_mainEpoche/epoca-eta-delle-scoperte.jpg);
-}
-
-#epoca-età-moderna {
-  background-image: url(./img/img_mainEpoche/epoca-eta-moderna.jpg);
-}
-
-#epoca-illuminismo {
-  background-image: url(./img/img_mainEpoche/epoca-illuminismo.jpg);
-}
-
-#epoca-età-delle-rivoluzioni {
-  background-image: url(./img/img_mainEpoche/epoca-eta-delle-rivoluzioni.jpg);
-}
-
-#epoca-rivoluzione-industriale {
-  background-image: url(./img/img_mainEpoche/epoca-rivoluzione-industriale.jpg);
-}
-
-#epoca-età-contemporanea {
-  background-image: url(./img/img_mainEpoche/epoca-eta-contemporanea.jpg);
-}
-
-#epoca-età-della-guerra-mondiale {
-  background-image: url(./img/img_mainEpoche/epoca-eta-della-guerra-mondiale.jpg);
-}
-
-#epoca-guerra-fredda {
-  background-image: url(./img/img_mainEpoche/epoca-guerra-fredda.jpg);
-}
-
-#epoca-era-post-guerra-fredda {
-  background-image: url(./img/img_mainEpoche/epoca-era-post-guerra-fredda.jpg);
-}
-
-#epoca-età-contemporanea-avanzata {
-  background-image: url(./img/img_mainEpoche/epoca-eta-contemporanea-avanzata.jpg);
-}
-
-.introEpoca{
-  margin: 0.5rem;
-  background-color: #ffffffbf;
-  padding: 0.5rem;
-  border-radius: 1rem 0rem 1rem 0rem;
-  animation: text 3s ease-in-out;
-}
-
-.titoloTesto{
-  margin: 0.5rem;
-  background-color: #ffffffbf;
-  padding: 0.5rem;
-  border-radius: 1rem 0rem 1rem 0rem;
-  animation: text 3s ease-in-out;
-}
-
-.activeEpoca{
-  min-width: 30rem;
-  text-align: center;
-  padding: 1rem 1rem 0rem 1rem;
-  min-height: 40rem;
-  background-size: 31rem 20rem;
-  box-shadow: 8px 0px 15px 4px;
-  animation: activeEpoca 1s ease-in;
-}
-
-.inactiveEpoca{
-  min-width: 12rem;
-  text-align: center;
-  padding: 1rem 1rem 0rem 1rem;
-  min-height: 40rem;
-  background-size: 31rem 20rem;
-  box-shadow: 8px 0px 15px 4px;
-  animation: inactiveEpoca 1s ease-out;
-}
-
-/*animazioni mainEpoche*/
-
-@keyframes text {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-@keyframes activeEpoca {
-  0%{
-    min-width: 12rem;
-  }
-  100%{
-    min-width: 30rem;
-  }
-}
-
-@keyframes inactiveEpoca {
-  0%{
-    min-width: 30rem;
-  }
-  100%{
-    min-width: 12rem;
-  }
-}
-
-/*css mainInvenzioni*/
-
-#introBigSectionInvenzioni{
-  background-image: url(./img/backgroundImgSection3\ invenzioni.jpg);
-  padding: 2rem;
-  background-size: cover;
-  background-position-y: -4rem;
-  text-align: center;
-}
-
-#introBigSectionInvenzioni h1{
-  background-color: #ffffffe8;
-  border-radius: 0rem 3rem 0rem 3rem;
-  text-align: center;
-  width: 70%;
-  margin: auto;
-  padding: 1rem;
-}
-
-.epocheInvenzioni{
-  background-image: url(./img/img_mainInvenzioni/img_epoche.webp);
-  background-size: cover;
-  background-position-y: -5rem;
-  margin: 0;
-  padding: 3rem;
-  text-align: center;
-}
-
-.groupInvenzioni{
-  display: flex;
-  overflow: scroll;
-}
-
-.invenzioni{
-  background-image: url(./img/img_mainInvenzioni/img_invenzioni.jpeg);
-  padding: 2rem;
-  background-size: cover;
-  min-height: 17rem;
-}
-
-.cardInvenzioni, .epocheInvenzioni h3 {
-  background-color: #ffffffe8;
-  padding: 1rem;
-  border-radius: 1rem;
-  text-align: center;
-}
-
-.bigArticole{
-  box-shadow: 0px -8px 22px 4px;
-  margin-top: 0.3rem;
-}
-
-/*css continenti*/
-
-#introContinenti{
-  background-image: url(./img/backgroundImgSection3\ continenti.jpg);
-  padding: 2rem;
-  background-size: cover;
-  background-position-y: -3rem;
-  text-align: center;
-}
-
-#introContinenti h1{
-  margin: auto;
-  background-color: #ffffffd9;
-  width: 50%;
-  padding: 0.5rem;
-  border-radius: 3rem 0rem 3rem 0rem;
-}
-
-#continente-africa{
-  background-image: url(./img/img_continent/africa.webp);
-  background-position-x: -11rem;
-}
-
-#continente-europa{
-  background-image: url(./img/img_continent/europa.webp);
-  background-position-x: -7rem;
-}
-
-#continente-asia{
-  background-image: url(./img/img_continent/asia.jpg);
-}
-
-#continente-america-del-nord{
-  background-image: url(./img/img_continent/nord-america.jpeg);
-}
-
-#continente-america-del-sud{
-  background-image: url(./img/img_continent/sud-america.png);
-}
-
-#continente-oceania{
-  background-image: url(./img/img_continent/oceania.avif);
-}
-
-#continente-antartide{
-  background-image: url(./img/img_continent/antartide.webp);
-}
-
-#continente-africa,
-#continente-europa,
-#continente-asia,
-#continente-america-del-nord,
-#continente-america-del-sud,
-#continente-oceania,
-#continente-antartide{
-  padding: 2rem;
-  background-size: cover;
-  margin-top: 0.5rem;
-  box-shadow: 0px 0px 8px 3px;
-}
-
-.cardContinent h3, .cardContinent div{
-  text-align: center;
-  background-color: #ffffffd1;
-  padding: 2rem;
-  margin-top: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0px 11px 19px 2px;
-}
-
-#groupVideoContinent{
-  background-image: url(./img/backgroundImgSection3\ intro\ sezioni.jpg);
-  padding: 2rem;
-  text-align: center;
-  background-size: cover;
-  margin-top: 0.5rem;
-  background-position-x: -30rem;
-}
-
-#groupVideoContinent p{
-  background-color: #ffffffd1;
-  padding: 1.5rem;
-  margin: 1rem;
-  border-radius: 1rem;
-}
-
-#groupVideoContinent iframe{
-  width: 100%;
-  padding: 0.5rem;
-  background-color: black;
-  height: 14rem;
 }

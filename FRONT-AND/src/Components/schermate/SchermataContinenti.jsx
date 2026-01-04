@@ -9,7 +9,7 @@ const SchermataContinenti = () => {
                 <GlobalNavbar/>
             </header>
 
-            <main>
+            <main id = "schermataContinentiMain">
                 <MainContinenti/>
             </main>
             

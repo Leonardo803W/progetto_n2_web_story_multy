@@ -9,7 +9,7 @@ const SchermataEpoche = () => {
                 <GlobalNavbar/>
             </header>
 
-            <main>
+            <main id = "schermataEpocheMain">
                 <HumanEpoche/>
             </main>
             

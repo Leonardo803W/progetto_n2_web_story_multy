@@ -1,4 +1,5 @@
 import GlobalNavbar from "../GlobalNavbar";
+import Divulgatori from "../mainDivulgatori/Divulgatori";
 
 const SchermataDivulgatori = () => {
 
@@ -8,8 +9,8 @@ const SchermataDivulgatori = () => {
                 <GlobalNavbar/>
             </header>
 
-            <main>
-                
+            <main id = "schermataDivulgatoriMain">
+                <Divulgatori/>
             </main>
             
         </>
