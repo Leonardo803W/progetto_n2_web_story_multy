@@ -1316,11 +1316,17 @@
 }
 
 .buttonShowBattlesOff{
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+.buttonShowBattlesOff button{
   background-color: red;
   border-color: #9d2f2f;
   border-radius: 1rem;
-  margin-top: 0.5rem;
-  margin-left: 22rem;
+  width: 100%;
 }
 
 .articleBattles{
@@ -1518,9 +1524,10 @@
 
 #introBigSectionEpoche{
   background-image: url(./img/img_mainEpoche/titolo-img.jpg);
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   background-size: 27rem 9rem;
   min-height: 8rem;
+  text-align: center;
 }
 
 .epoche-scroll {
@@ -1629,7 +1636,7 @@
   min-width: 30rem;
   text-align: center;
   padding: 1rem 1rem 0rem 1rem;
-  min-height: 40rem;
+  min-height: 20rem;
   background-size: 31rem 20rem;
   box-shadow: 8px 9px 15px 5px;
   margin: 0.5rem;
@@ -1640,11 +1647,35 @@
   min-width: 12rem;
   text-align: center;
   padding: 1rem 1rem 0rem 1rem;
-  min-height: 40rem;
+  min-height: 20rem;
   background-size: 31rem 20rem;
   box-shadow: 8px 9px 15px 5px;
   margin: 0.5rem;
   animation: inactiveEpoca 1s ease-out;
+}
+
+#testoEpoche{
+  background-color: #ffffffe3;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4rem 0rem 6rem 0rem;
+  text-align: center;
+}
+
+#testoEpoche p{
+  line-height: 2;
+  margin: 0.5rem;
+}
+
+#videoEpoche{
+  text-align: center;
+  background-color: black;
+  padding: 0.5rem;
+}
+
+#videoEpoche iframe{
+  width: 95%;
+  height: 15rem;
 }
 
 /*animazioni mainEpoche*/
@@ -1706,10 +1737,11 @@
 
 .invenzioni{
   background-image: url(./img/img_mainInvenzioni/img_invenzioni.jpeg);
-  padding: 2rem;
+  padding: 3rem 1rem 1rem 1rem;
   background-size: cover;
   min-height: 17rem;
   margin: 0.5rem;
+  background-position-x: -4rem;
 }
 
 .cardInvenzioni, .epocheInvenzioni h3 {
@@ -1717,6 +1749,18 @@
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
+}
+
+.cardInvenzioni h5 {
+  margin: 1rem;
+  border-bottom: 1px black dashed;
+}
+
+.cardInvenzioni button {
+  border-color: #8b5604;
+  background-color: #ea8313;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .bigArticole{
@@ -1863,8 +1907,10 @@
 }
 
 .fontiPrincipaleCard > p{
-  width: 40%;
+  width: 30%;
   background-color: red;
+  text-align: center;
+  border-radius: 1rem;
 }
 
 .divulgatoriCanaliYoutube{
@@ -1897,6 +1943,44 @@
   margin-right: 2rem;
 }
 
+.testoDivulgatori{
+  background-color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  line-height: 2;
+}
+
+.groupImgDivulgatori{
+  display: flex;
+  justify-content: center;
+}
+
+.groupImgDivulgatori img {
+  width: 100%;
+  height: 10rem;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.showDivulgatoriOn{
+  position: absolute;
+  bottom: 10.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: red;
+  border-color: #312e39;
+}
+
+.showDivulgatoriOf{
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: red;
+  border-color: #312e39;
+}
+   
 /*css Creazione*/
 
 .mainCreazione{

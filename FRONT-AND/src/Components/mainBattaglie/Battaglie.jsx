@@ -82,7 +82,6 @@ const Battaglie = () => {
         </p>
       </section>
 
-      <button className = {showBattles ? 'buttonShowBattlesOff' : 'd-none'} onClick = {() => handelShowBattles()}>Back</button>
       <section className = {showBattles ? 'd-block' : 'd-none'}>
         {continents.map((continent) => {
           const continentActive = activeContinents.includes(continent.id)
@@ -140,6 +139,10 @@ const Battaglie = () => {
           );
         })}
       </section>
+
+        <div className = 'buttonShowBattlesOff'>
+          <button className = {showBattles ? 'd-block' : 'd-none'} onClick = {() => handelShowBattles()}>Back</button>
+        </div>
     </section>
   );
 };

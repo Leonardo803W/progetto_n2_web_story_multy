@@ -33,11 +33,15 @@ const Invenzioni = () => {
                     <article key={inv.id}>
                         <div className = 'invenzioni'>
                             <div className = 'cardInvenzioni'>
-                                <h6>{inv.title}</h6>
-                                <p>{inv.testo}</p>
-                                <a href={inv.link} target="_blank" rel="noopener noreferrer">
-                                  Fonte:  {inv.link}
-                                </a>
+                                <h5>{inv.title}</h5>
+                                <p className = 'mb-2'>{inv.testo}</p>
+                                <button>Dettagli</button>
+                                <p>
+                                  Fonte:
+                                  <a href={inv.link} target="_blank" rel="noopener noreferrer" className = 'm-1'>
+                                    {inv.link}
+                                  </a>
+                                </p>
                             </div>
                         </div>
                     </article>
@@ -46,6 +50,7 @@ const Invenzioni = () => {
             </div>
         </div>
       ))}
+
     </section>
   );
 };
