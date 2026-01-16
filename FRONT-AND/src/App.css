@@ -49,6 +49,9 @@
   margin: 0%;
   background: #ffffff99;
   font-size: xx-large;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 #navbar-item-desktop{
@@ -307,6 +310,7 @@
 }
 
 .divVisible{
+  padding: 4rem;
   animation: visibleDiv 1s ease-in;
 }
 
@@ -340,7 +344,7 @@
   box-shadow: 0px 0px 15px 1px;
 }
 
-#giraPagina{
+.giraPagina{
   padding: 0.5rem;
   width: 70%;
   border-radius: 3rem;
@@ -379,7 +383,6 @@
   color: #a53737;
   background-color: #ffffff75;
   padding: 0.5rem;
-  margin: 0.5rem;
   border-radius: 1rem;
   border-color: #ff5a5a;
   font-weight: 400;
@@ -566,7 +569,7 @@
   }
 
   .cardCaroselloLaptop {
-    width: 10%;
+    width: 14%;
     background-color: white;
     opacity: 0.5;
     transform: skew(10deg, 10deg);
@@ -574,6 +577,14 @@
     border-radius: 2rem;
     position: relative;
     top: -3rem;
+  }
+
+  .activeCardCarousellSection2Laptop{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    top: -5rem;
+    width: 18%;
   }
 
   .laptopTitleSection2 {
@@ -586,22 +597,6 @@
     padding: 0.5rem;
     margin: 0.5rem;
     font-size: x-small;
-  }
-
-  .activeCardCarousellSection2Laptop{
-    opacity: 1;
-    transform: scale(1.2);
-    position: relative;
-    top: -5rem;
-    width: 40%;
-  }
-
-  .activeCardCarousellSection2Laptop h3{
-    font-size: larger;
-  }
-
-  .activeCardCarousellSection2Laptop p{
-    font-size: medium;
   }
 
   .carouselWrapperTablet {
@@ -625,6 +620,12 @@
     height: 6rem;
     position: relative;
     top: -2rem;
+  }
+
+  .allButton {
+    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -662,12 +663,30 @@
   justify-content: flex-end;
 }
 
-.div-main-home-section3 {
+.divMainHomeSection3Intro {
     width: 70%;
     padding: 1rem;
     position: absolute;
     z-index: 0;
     animation: divSection3TelefonoETablet 1s ease;
+}
+
+.divMainHomeSection3Intro h4{
+  margin: 0;
+  padding: 1rem;
+  color: white;
+  animation: divSection3TelefonoETabletH4P 3s ease;
+  background-color: #5a5a5a87;
+  border-radius: 2rem;
+}
+
+.divMainHomeSection3Intro p{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff96;
+  border-radius: 2rem;
+  animation: divSection3TelefonoETabletH4P 3s ease;
 }
 
 #multi-sezione{
@@ -680,28 +699,6 @@
   width: 90%;
   margin-right: auto;
   transition: width 1s ease;
-}
-
-.div-main-home-section3 h4{
-  margin: 0;
-  padding: 1rem;
-  color: white;
-  font-size: smaller;
-  font-weight: 900;
-  animation: divSection3TelefonoETabletH4P 3s ease;
-  background-color: #5a5a5a87;
-  border-radius: 2rem;
-}
-
-.div-main-home-section3 p{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: #ffffff96;
-  border-radius: 2rem;
-  font-size: xx-small;
-  font-weight: 500;
-  animation: divSection3TelefonoETabletH4P 3s ease;
 }
 
 .articolo {
@@ -783,10 +780,6 @@
   font-size: x-small;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-}
-
-.articolo-contenuto{
-  display: none;
 }
 
 .articolo-contenuto-active{
@@ -905,16 +898,6 @@
   #Main-home-section3{
     background-size: 62rem 28rem;
   }
-
-  .div-main-home-section3-intro h4{
-    font-size: medium;
-  }
-   
-  .div-main-home-section3-intro p{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-size: small;
-  }
 }
 
 /*media query per laptop MainHomeSection3*/
@@ -934,30 +917,30 @@
     position: relative;
   }
 
-  #div-main-home-section3-intro{
-    width: 90%;
-    position: relative;
-    z-index: 0;
+  .divMainHomeSection3Intro{
+    width: 55%;
     left: 1rem;
     text-align: center;
+    animation: divMainHomeSection3Intro 2s ease-in;
   }
 
-  .div-main-home-section3-intro h4{
-    margin-bottom: 3rem;
-    color: #000000;
-    background-color: #ffffffad;
-    border-radius: 2rem;
-    padding: 0.5rem;
+  @keyframes divMainHomeSection3Intro {
+    0%{
+      width: 0%;
+      left: 0;
+      opacity: 0;
+    }
+    50%{
+      width: 55%;
+      left: 1;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 
-  .articolo-contenuto{
-    display: none;
-  }
-
-  .div-main-home-section3-intro p{
-    margin-top: 3rem;
-    padding: 1rem;
-    color: #000000;
+  .divMainHomeSection3Intro h4, .divMainHomeSection3Intro p{
+    margin: 1rem 0rem 1rem 0rem;
   }
 
   .articolo {
@@ -979,13 +962,14 @@
     height: 6rem;
   }
 
-  #multi-sezione{
+  #multi-sezione {
     display: flex;
     width: 50%;
     height: 100%;
     position: relative;
     z-index: 1;
     transform: skewX(20deg);
+    right: -32rem;
   }
 
   #multi-sezione-active{
@@ -1074,21 +1058,6 @@
     color: #ffffff;
     box-shadow: 0px 3px 6px 5px;
   }
-
-  /*animazioni MainHomeSection3*/
-
-  @keyframes Main-home-section3 {
-    0%{
-      opacity: 0;
-      position: relative;
-      z-index: 0;
-    }
-    100%{
-      opacity: 1;
-      position: relative;
-      z-index: 0;
-    }
-  }
 }
 
 /*media query per desktop MainHomeSection3*/
@@ -1155,10 +1124,8 @@
 .card img{
   border-radius: 1rem;
   background-color: black;
-  min-height: 9rem;
+  max-height: 9rem;
 }
-
-
 
 .groupContent{
   background-image: url(./img/divulgatori/vecchio-libro-aperto-per-halloween_135176-343.jpg);
@@ -1222,8 +1189,16 @@
 
 @media (min-width: 426px){
 
+  .groupContent h5 {
+    padding: 3rem 5rem 1rem 1rem;
+  }
+
+  .groupContent{
+    background-size: 11rem 16rem;
+  }
+
   .card{
-    width: 35%;
+    width: 23%;
   }
 }
 
@@ -1253,14 +1228,14 @@
   }
 
   .groupContent{
-  background-size: 12rem 10rem;
-  background-position-x: 0rem;
-  background-position-y: -1rem;
-}
+    background-size: 12rem 10rem;
+    background-position-x: 0rem;
+    background-position-y: -1rem;
+  }
 
-.groupContent h5{
-  padding: 2rem 1.5rem 1rem 1rem;
-}
+  .groupContent h5 {
+      padding: 2rem 3.5rem 1rem 1rem;
+  }
 }
 
 /*media query per desktop Section4*/

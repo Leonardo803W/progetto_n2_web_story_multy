@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { continents } from '../mainBattaglie/datiBattaglie';
+import { battles } from '../mainBattaglie/datiBattaglie';
 
 
 const Battaglie = () => {
@@ -83,7 +83,7 @@ const Battaglie = () => {
       </section>
 
       <section className = {showBattles ? 'd-block' : 'd-none'}>
-        {continents.map((continent) => {
+        {battles.map((continent) => {
           const continentActive = activeContinents.includes(continent.id)
 
           return(

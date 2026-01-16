@@ -34,15 +34,13 @@ const MainHomeSection3 = () => {
   return (
     <>
       <article id = "Main-home-section3">
-        <div className = {isAnyActive ? 'd-none' : 'div-main-home-section3'}>
-          <div id = 'div-main-home-section3-intro'>
-            <h4>La storia umana puo essere molto di piu di quello che sembra!</h4>
-            <p>
-              Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
-              nel mondo ci sono milliardi di umani, ma di storie c'e' ne sono molte di piu,
-              vuoi scoprire quale altre storie e versioni ci sono?
-            </p>
-          </div>
+        <div className = {isAnyActive ? 'd-none' : 'divMainHomeSection3Intro'}>
+          <h4>La storia umana puo essere molto di piu di quello che sembra!</h4>
+          <p>
+            Di storie ce ne sono di diverse salse, tra cui Invenzioni, Continenti, Cultura e molto altro,
+            nel mondo ci sono milliardi di umani, ma di storie c'e' ne sono molte di piu,
+            vuoi scoprire quale altre storie e versioni ci sono?
+          </p>
         </div>
 
         <section id={isAnyActive ? 'multi-sezione-active' : 'multi-sezione'}>
@@ -60,7 +58,7 @@ const MainHomeSection3 = () => {
                   </button>
                 </div>
 
-                <p className={isActive ? 'articolo-contenuto-active' : 'articolo-contenuto'}>
+                <p className={isActive ? 'articolo-contenuto-active' : 'd-none'}>
                   {articolo.content}
                 </p>
 

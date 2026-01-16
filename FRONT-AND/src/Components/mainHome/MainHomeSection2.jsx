@@ -1,36 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { battles } from '../mainBattaglie/datiBattaglie'
 
 /* card e import da sostituire con fetch in un secondo momento */
 import imgB2 from '../../img/img (caroselli home)/battaglie/Battaglia di Waterloo.jpg';
-
-const cards = [
-  {
-    id: 1,
-    title: 'Battaglia di Waterloo (1815)',
-    intro: 'Lo scontro decisivo che segnò la fine dell’era napoleonica in Europa.'
-  },
-  {
-    id: 2,
-    title: 'Battaglia di Canne (216 a.C.)',
-    intro: 'Una delle più grandi vittorie tattiche di Annibale contro l’esercito romano.'
-  },
-  {
-    id: 3,
-    title: 'Battaglia di Stalingrado (1942-1943)',
-    intro: 'Un punto di svolta cruciale della Seconda guerra mondiale sul fronte orientale.'
-  },
-  {
-    id: 4,
-    title: 'Battaglia di Hastings (1066)',
-    intro: 'Lo scontro che portò alla conquista normanna dell’Inghilterra.'
-  },
-  {
-    id: 5,
-    title: 'Battaglia di Lepanto (1571)',
-    intro: 'La grande battaglia navale che fermò l’espansione ottomana nel Mediterraneo.'
-  }
-];
 
 const MainHomeSection2 = () => {
 
@@ -41,7 +14,13 @@ const MainHomeSection2 = () => {
   // indici carosello
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeIndexTablet, setActiveIndexTablet] = useState(0);
-  const totalCards = cards.length;
+  
+  // flatmap serve per avere un unico array on nidato su un livello
+  const allBattles = battles.flatMap(continent =>
+    continent.millennia.flatMap(m => m.battles)
+  );
+
+  const totalCards = allBattles.slice(0, 5).length;
 
   const handleGiraPagina = () => {
     setAnimateDiv(prev => !prev);
@@ -93,15 +72,15 @@ const MainHomeSection2 = () => {
               <article className="allBox">
                 <img src={imgB2} alt="copertina" id="boxTelefonoImg1" />
                 <div className="allCardWrapper">
-                  {cards.map((card, index) => (
+                  {battles.slice(0, 5).map((card, index) => (
                     <div
                       key={card.id}
                       className={`cardCaroselloTelefono ${
                         index === activeIndex ? 'activeCardCarousellTelefono' : 'd-none'
                       }`}
                     >
-                      <h3 className="allTitleSection2">{card.title}</h3>
-                      <p className="allParagrafoSection2">{card.intro}</p>
+                      <h3 className="allTitleSection2">{card.millennia[0].battles[0].title}</h3>
+                      <p className="allParagrafoSection2">{card.millennia[0].battles[0].text}</p>
                       <Link to="/Battaglie">
                         <p className="allButton">scopri</p>
                       </Link>
@@ -112,8 +91,6 @@ const MainHomeSection2 = () => {
 
               <button className="allArrow" onClick={() => goToNextOrPrev('next')}>&gt;</button>
             </div>
-
-            <button id = "giraPagina" onClick={handleGiraPagina}>back</button>
           </section>
 
           {/* Carosello tablet */}
@@ -124,8 +101,8 @@ const MainHomeSection2 = () => {
 
               <article className="allBox">
                 <div className="cardRowTablet">
-                  {visibleIndicesTablet().map(idx => {
-                    const card = cards[idx];
+                  {visibleIndicesTablet().slice(0, 5).map(idx => {
+                    const card = battles[idx];
                     return (
                       <div
                         key={card.id}
@@ -136,8 +113,8 @@ const MainHomeSection2 = () => {
                         }`}
                       >
                         <div className="m-3">
-                          <h3 className="allTitleSection2">{card.title}</h3>
-                          <p className="allParagrafoSection2">{card.intro}</p>
+                          <h3 className="allTitleSection2">{card.millennia[0].battles[0].title}</h3>
+                          <p className="allParagrafoSection2">{card.millennia[0].battles[0].text}</p>
                           <Link to="/Battaglie">
                             <p className="allButton">scopri</p>
                           </Link>
@@ -159,15 +136,15 @@ const MainHomeSection2 = () => {
 
               <article className="box">
                 <div className="cardRowTablet">
-                  {cards.map((card, index) => (
+                  {battles.slice(0, 5).map((card, index) => (
                     <div
                       key={card.id}
                       className={`cardCaroselloLaptop ${
-                        index === activeIndex ? 'activeCardCarosellSection2Laptop' : ''
+                        index === activeIndex ? 'activeCardCarousellSection2Laptop' : ''
                       }`}
                     >
-                      <h3 className="allTitleSection2">{card.title}</h3>
-                      <p className="allParagrafoSection2">{card.intro}</p>
+                      <h3 className="allTitleSection2">{card.millennia[0].battles[0].title}</h3>
+                      <p className="allParagrafoSection2">{card.millennia[0].battles[0].text}</p>
                       <Link to="/Battaglie">
                         <p className="allButton">scopri</p>
                       </Link>
@@ -180,6 +157,7 @@ const MainHomeSection2 = () => {
             </div>
           </section>
 
+          <button className = {animateCarosell ? "giraPagina" : "d-none"} onClick={handleGiraPagina}>back</button>
         </section>
       </section>
     </>

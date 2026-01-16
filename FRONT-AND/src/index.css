@@ -46,3 +46,21 @@ a{
   text-decoration: none;
   font-size: x-small;
 }
+
+/*media query per tablet*/
+
+@media (min-width: 426px){
+
+  h1, h2, h3, h4, h5, h6{
+    font-size: large;
+    font-weight: 800;
+  }
+
+  p, button{
+    font-size: smaller;
+  }
+
+  a{
+    font-size: smaller;
+  }
+}
