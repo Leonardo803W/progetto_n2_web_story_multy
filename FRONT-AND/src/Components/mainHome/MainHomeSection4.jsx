@@ -1,27 +1,5 @@
 import { useState } from 'react';
-
-/*card e import da sostituire con fetch in un secondo momneto*/
-import imgDivulgatori1 from '../../img/divulgatori/alessandro barbero.webp'
-import imgDivulgatori2 from '../../img/divulgatori/roberto-giacobbo.jpg'
-import imgDivulgatori3 from '../../img/divulgatori/ulisse-il-piacere-della-scoperta-alberto-angela-rai1-1.jpg'
-
-const cards = [
-  { id: 1,
-      title: 'Roberto Giacobbo',
-      content: 'Un divulgatore molto noto e altrettanto adorato dai spettatori',
-      src: 'https://www.youtube.com/embed/ugXwgScJS8Y',
-  },
-  { id: 2,
-      title: 'Alessandro Barbero',
-      content: 'Un divulgatore molto noto e altrettanto adorato dai spettatori',
-      src: 'https://www.youtube.com/embed/y6gTYOq1oGU',
-  },
-  { id: 3,
-      title: 'Alberto Angela',
-      content: 'Un divulgatore molto noto e altrettanto adorato dai spettatori',
-      src: 'https://www.youtube.com/embed/5bMZYuLm0Tc',
-  }
-]
+import { divulgatori } from '../mainDivulgatori/datiDivulgatoriStoria'
 
 const MainHomeSection4 = () => {
 
@@ -37,14 +15,13 @@ const MainHomeSection4 = () => {
                 </div>
 
                 <section id = 'groupCardDivulgatoriTelefonoETablet'>
-                    {cards.map((articolo) => {
+                    {divulgatori.slice(0, 3).map((articolo) => {
                         return (
                             <div key={articolo.id} className="card">
-                                <img src={imgDivulgatori1} alt="" />
+                                <img src={articolo.src} alt="" />
                                 <hr className='m-1 text-light'/>
                                 <div className='groupContent'>
                                     <h5>{articolo.title}</h5>
-                                    <p>{articolo.content}</p>
                                 </div>
                             </div>
                         );
@@ -52,21 +29,20 @@ const MainHomeSection4 = () => {
                 </section>
 
                 <section id = 'groupCardDivulgatoriLaptopEDesktop'>
-                    {cards.map((articolo) => {
+                    {divulgatori.slice(0, 3).map((articolo) => {
                         return (
                             <article key={articolo.id} className = 'articleDivulgatori'>
                                 <div className="card">
-                                    <img src={imgDivulgatori1} alt="" />
+                                    <img src={articolo.src} alt="" />
                                     <hr className='m-1 text-light'/>
                                     <div className='groupContent'>
                                         <h5>{articolo.title}</h5>
-                                        <p>{articolo.content}</p>
                                     </div>
                                 </div>
 
                                 <iframe
-                                    src = {articolo.src}
-                                    title = 'video di Alberto Angela'
+                                    src = {articolo.youtube}
+                                    title = {`Video di ${articolo.title}`}
                                     loading = "lazy"          
                                     sandbox = "allow-scripts allow-same-origin" 
                                     allow = "fullscreen"  
