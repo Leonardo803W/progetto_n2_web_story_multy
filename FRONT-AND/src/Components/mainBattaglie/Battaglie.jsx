@@ -62,17 +62,16 @@ const Battaglie = () => {
       </div>
 
       <section className = {showBattles ? 'd-none' : 'introMainBattaglie'}>
-        <p className = {isParagraphVisible(0) ? 'firstP' : 'd-none'}>
-          I vincitori scrivono la storia, ma avvolte basta cambiare il punto di vista,
-          per poter vedere una vittoria o una sconfitta, che siano grandi o immense sono solo di facciata,
-          spesso non si da peso che dietro ad una battaglia, non sempre per cambiarne il corso di essa
-          e farla diventare vittoria o sconfitta, non sono sempre decisioni di grande spessore,
-          ma ben si delle piccole azioni, che se ripetute possono fare la differenza totale,
-          una differenza che non fa rumore, e spesso sottovalutata.
-        </p>
+        <div className = 'showDesktopIntro'>
+          <div className = {isParagraphVisible(0) ? 'firstP' : 'd-none'} id = 'grpupBattaglieP'>
+            <p>I vincitori scrivono la storia, ma a volte basta cambiare punto di vista per capire che una vittoria o una sconfitta, per quanto grandi o immense possano sembrare, sono spesso solo di facciata.</p>
+            <p>Spesso non si dà il giusto peso al fatto che dietro ogni battaglia non sono sempre decisioni di grande spessore a cambiarne il corso e a trasformarla in vittoria o sconfitta.</p>
+            <p>Molto più spesso sono le piccole azioni, ripetute nel tempo, a creare una differenza totale: una differenza silenziosa, che non fa rumore e che viene facilmente sottovalutata.</p>
+          </div>
 
-        <div className = {isParagraphVisible(1) ? 'cssVideoMomentaneo' : 'd-none'}>
-          video
+          <p className = {isParagraphVisible(1) ? 'cssVideoMomentaneo' : 'd-none'}>
+            video
+          </p>
         </div>
 
         <p className = {isParagraphVisible(3) ? 'secondP' : 'd-none'}>
@@ -82,7 +81,7 @@ const Battaglie = () => {
         </p>
       </section>
 
-      <section className = {showBattles ? 'd-block' : 'd-none'}>
+      <section className = {showBattles ? 'groupBattles' : 'd-none'}>
         {battles.map((continent) => {
           const continentActive = activeContinents.includes(continent.id)
 
@@ -108,7 +107,7 @@ const Battaglie = () => {
                     const isActive = activePeriods.includes(periodKey);
 
                     return (
-                      <section key={periodKey}>
+                      <section key={periodKey} id = 'groupBattles'>
                         <h3
                           className="millenniumBlock"
                           onClick={() => handel(periodKey, 'period')}

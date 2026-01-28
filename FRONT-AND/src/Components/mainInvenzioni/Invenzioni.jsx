@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { invenzioni } from './datiInvenzione';
 
+import img1 from  '../../img/img_mainInvenzioni/freaccia sinistra.jpg'
+
 const Invenzioni = () => {
 
   const [activeInvention, setActiveInvention] = useState ([])
@@ -21,33 +23,71 @@ const Invenzioni = () => {
       </div>
 
       {invenzioni.map((item) => (
-        <div key={item.id} className = 'bigArticole'>
-          <div className = 'epocheInvenzioni' onClick={() => handelInvenzione(item.id)}>
-            <h3>{item.title}</h3>
-            <hr />
-          </div>
-          
-            <div className = {activeInvention.includes(item.id) ? 'groupInvenzioni' : 'd-none'}>
-                {item.invenzioni.map((inv) => (
-                  <>
-                    <article key={inv.id}>
-                        <div className = 'invenzioni'>
-                            <div className = 'cardInvenzioni'>
-                                <h5>{inv.title}</h5>
-                                <p className = 'mb-2'>{inv.testo}</p>
-                                <button>Dettagli</button>
-                                <p>
-                                  Fonte:
-                                  <a href={inv.link} target="_blank" rel="noopener noreferrer" className = 'm-1'>
-                                    {inv.link}
-                                  </a>
-                                </p>
-                            </div>
-                        </div>
+        <div key={item.id} className="box">
+
+          {item.id % 2 === 0 ? (
+            <>
+              <img src={img1} alt="" className="arrowRight" />
+
+              <div className="bigArticole">
+                <div
+                  className="epocheInvenzioni"
+                  onClick={() => handelInvenzione(item.id)}
+                >
+                  <h3>{item.title}</h3>
+                  <hr />
+                </div>
+
+                <div
+                  className={
+                    activeInvention.includes(item.id)
+                      ? 'inventionOpen'
+                      : 'd-none'
+                  }
+                >
+                  {item.invenzioni.map((inv) => (
+                    <article className="articoleInvention" key={inv.id}>
+                      <h5>{inv.title}</h5>
+                      <button>Dettagli</button>
                     </article>
-                  </>
-                ))}
-            </div>
+                  ))}
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="bigArticole">
+                <div
+                  className="epocheInvenzioni"
+                  onClick={() => handelInvenzione(item.id)}
+                >
+                  <h3>{item.title}</h3>
+                  <hr />
+                </div>
+
+                <div
+                  className={
+                    activeInvention.includes(item.id)
+                      ? 'inventionOpen'
+                      : 'd-none'
+                  }
+                >
+                  {item.invenzioni.map((inv) => (
+                    <article className="articoleInvention" key={inv.id}>
+                      <h5>{inv.title}</h5>
+                      <button>Dettagli</button>
+                    </article>
+                  ))}
+                </div>
+              </div>
+
+              <img src={img1} alt="" className="arrowLeft" />
+            </>
+          )}
+
+          <div className = 'waterMirrorUp'>-</div>
+          <div className = 'waterMirrorDown' >-</div>
+
         </div>
       ))}
 

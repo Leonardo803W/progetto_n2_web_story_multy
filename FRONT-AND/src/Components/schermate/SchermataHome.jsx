@@ -35,10 +35,12 @@ const SchermataHome = () => {
                 <main>
                     <MainHomeSection1 />
                     <hr className="spaziatoriHomeMain" />
-                    <MainHomeSection2 />
-                    <hr className="spaziatoriHomeMain" />
-                    <MainHomeSection3 />
-                    <hr className="spaziatoriHomeMain" />
+                    <div>
+                        <MainHomeSection2 />
+                        <hr className="spaziatoriHomeMain" />
+                        <MainHomeSection3 />
+                        <hr className="spaziatoriHomeMain" />
+                    </div>
                     <MainHomeSection4 />
                     <hr className="spaziatoriHomeMain" />
                 </main>

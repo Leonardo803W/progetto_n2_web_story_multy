@@ -321,7 +321,6 @@
   background-color: #ffffff61;
   border-radius: 3rem;
   width: 90%;
-  font-size: small;
   box-shadow: 0px 0px 11px 6px;
 }
 
@@ -633,7 +632,7 @@
 
 @media (min-width: 1201px) {
   #section2 {
-    background-size: 90rem 40rem;
+    background-size: 106rem 35rem;
     background-position-x: 0rem;
   }
 
@@ -1062,11 +1061,25 @@
 
 /*media query per desktop MainHomeSection3*/
 
-@media (min-width: 769px) {
+@media (min-width: 1201px) {
 
   #Main-home-section3 {
-    background-size: 104rem 45rem;
-    background-position-y: -7rem;
+    background-size: 73rem 45rem;
+    background-repeat: repeat;
+  }
+
+  #multi-sezione {
+    right: -50rem;
+    width: 55%;
+  }
+
+  #groupCardDivulgatoriLaptopEDesktop {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .articleDivulgatori {
+    width: 45%;
   }
 }
 
@@ -1250,10 +1263,23 @@
   }
 }
 
+/*media query per desktop MainHomeSection4*/
+
+@media (min-width: 1201px) {
+  .card {
+    width: 45%;
+  }
+
+  .groupContent h5 {
+    padding: 2rem 2.5rem 1rem 1rem;
+  }
+}
+
 /*css mainBattaglie*/
 
 #schermataBataglieMain{
   background-color: #e5c996;
+  min-height: 51rem;
 }
 
 #titleBattaglie{
@@ -1261,7 +1287,7 @@
   padding: 1rem;
   background-size: 28rem 12rem;
   background-position-y: 0rem;
-  height: 6rem;
+  min-height: 8rem;
   text-align: center;
 }
 
@@ -1269,7 +1295,8 @@
   margin: 1rem 0rem 1rem 0rem;
 }
 
-.introMainBattaglie p{
+#grpupBattaglieP, .introMainBattaglie p{
+  text-align: center;
   padding: 1rem;
   background-color: #ffffffd1;
   border-radius: 1rem;
@@ -1314,6 +1341,10 @@
   border-color: #9d2f2f;
   border-radius: 1rem;
   width: 100%;
+}
+
+.groupBattles{
+  display: block;
 }
 
 .articleBattles{
@@ -1500,6 +1531,75 @@
   100%{
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/*media query for laptop*/
+
+@media (min-width: 769px) {
+  
+  #continent-sud-america, 
+  #continent-nord-america, 
+  #continent-oceania, 
+  #continent-africa, 
+  #continent-asia, 
+  #continent-europa {
+    background-size: 32rem 13rem;
+  }
+}
+
+/*media query per desktop Battaglie*/
+
+@media (min-width: 1201px) {
+
+  .epocheInvenzioni{
+    background-size: 33rem 18rem;
+  }
+
+  #continent-sud-america, 
+  #continent-nord-america, 
+  #continent-oceania, 
+  #continent-africa, 
+  #continent-asia, 
+  #continent-europa {
+    background-size: 24rem 13rem;
+  }
+
+  #titleBattaglie {
+    background-size: 33rem 12rem;
+  }
+  
+  .showDesktopIntro{
+    margin: 1rem;
+    display: flex;
+  }
+
+  .firstP{
+    width: 50%;
+  }
+
+  .cssVideoMomentaneo{
+    width: 50%;
+  }
+
+  #groupBattles{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #continent-sud-america, 
+  #continent-nord-america, 
+  #continent-oceania, 
+  #continent-africa, 
+  #continent-asia, 
+  #continent-europa{
+    width: 48%;
+  }
+
+  .groupBattles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 
@@ -1708,51 +1808,145 @@
   text-align: center;
 }
 
+.box{
+  display: block
+}
+
+.bigArticole {
+  box-shadow: 0px -8px 22px 4px;
+  width: 100%;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background-image: url(/src/img/img_mainInvenzioni/img_epoche.webp);
+  background-size: 50rem 31rem;
+  background-position-y: -1rem;
+  background-position-x: -13rem;
+}
+
 .epocheInvenzioni{
-  background-image: url(./img/img_mainInvenzioni/img_epoche.webp);
-  background-size: cover;
-  background-position-y: -3rem;
-  margin: 0;
   padding: 3rem;
   text-align: center;
+  cursor: pointer;
 }
 
-.groupInvenzioni{
-  display: flex;
-  overflow: scroll;
-}
-
-.invenzioni{
-  background-image: url(./img/img_mainInvenzioni/img_invenzioni.jpeg);
-  padding: 3rem 1rem 1rem 1rem;
-  background-size: cover;
-  min-height: 17rem;
-  margin: 0.5rem;
-  background-position-x: -4rem;
-}
-
-.cardInvenzioni, .epocheInvenzioni h3 {
-  background-color: #ffffffe8;
+.epocheInvenzioni h3{
+  background-color: #ffffffc7;
   padding: 1rem;
+  width: 50%;
+  margin: auto;
+  border-radius: 0rem 3rem 0rem 2rem;
+}
+
+.inventionOpen{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+.articoleInvention{
+  background-color: #db4408;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
   border-radius: 1rem;
-  text-align: center;
+  margin: 0.5rem;
 }
 
-.cardInvenzioni h5 {
-  margin: 1rem;
-  border-bottom: 1px black dashed;
+.articoleInvention button{
+  border-radius: 1rem;
+  background-color: #733717;
+  color: white;
+  border-color: #d05a02;
 }
 
-.cardInvenzioni button {
-  border-color: #8b5604;
-  background-color: #ea8313;
-  padding: 0.3rem 1rem 0.3rem 1rem;
-  margin-bottom: 0.5rem;
+.arrowRight, .arrowLeft{
+  display: none;
 }
 
-.bigArticole{
-  box-shadow: 0px -8px 22px 4px;
-  margin-top: 0.3rem;
+.waterMirrorUp, .waterMirrorDown{
+  background-image: url('./img/img_mainInvenzioni/specchio\ acqua.jpg');
+  padding: 0rem;
+  background-position-y: -11rem;
+}
+
+.waterMirrorDown{
+  transform: scaleY(-1);
+}
+
+/*media query per tablet Invenzioni*/
+
+@media (min-width: 426px) {
+
+  .bigArticole {
+    background-position-x: -1rem;
+  }
+
+  .inventionOpen {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .articoleInvention {
+    width: 45%;
+  }
+
+}
+
+/*media query per laptop Invenzioni*/
+
+@media (min-width: 769px) {
+
+  .bigArticole{
+    width: 70%;
+    margin: 0.5rem 0.5rem 8rem 0.5rem;
+    background-size: 46rem 28rem;
+  }
+
+  .arrowRight, .arrowLeft{
+    display: block;
+  }
+
+  .arrowRight{
+    width: 25%;
+    margin: 8rem 0.5rem 0.5rem 0.5rem;
+    transform: scaleX(-1);
+  }
+
+  .arrowLeft{
+    width: 25%;
+    margin: 8rem 0.5rem 0.5rem 0.5rem;
+    transform: rotateX(31deg);
+  }
+
+  .box{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .waterMirrorUp, .waterMirrorDown{
+    display: none;
+  }
+
+}
+
+/*media query per desktop Invenzioni*/
+
+@media (min-width: 1201px) {
+
+  #introBigSectionInvenzioni{
+    background-size: 33rem 18rem;
+  }
+  
+  .bigArticole {
+    background-size: 35rem 28rem;
+  }
+
+  .articoleInvention {
+    width: 30%;
+  }
+
 }
 
 /*css continenti*/

@@ -52,7 +52,7 @@ const GlobalNavbar = ({ triggerAlert }) => {
                 <Offcanvas.Title>Sezioni disponibili:</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body id = "offCanvsBody">
-                    <p className = "notEnter">
+                    <p className = "Enter">
                       <Link to = "/">Home</Link>
                     </p>
                     <p className = "enter" onClick = {() => handelAlert(1)}>
@@ -78,24 +78,36 @@ const GlobalNavbar = ({ triggerAlert }) => {
             </Link>
 
             <div id = "navbar-item-desktop">
-              <p className = "enter">
-                <Link to = '/'>Home</Link>
-              </p>
-              <p className = "enter"  onClick = {() => handlemenuProfile(2)}>
-                <Link to = '/Battaglie'>Battaglie</Link>
-              </p>
-              <p className = "enter">
-                <Link to = "/Invenzioni">Invenzioni</Link>
-              </p>
-              <p className = "enter">
-                <Link to = "/Epoche">Epoche</Link>
-              </p>
-              <p className = "enter">
-                <Link to = "/Continenti">Continenti</Link>
-              </p>
-              <p className = "enter">
-                <Link to = "/Divulgatori">Divulgatori</Link>
-              </p>
+              <Link to = '/'>
+                <p className = "enter">
+                  Home
+                </p>
+              </Link>
+              <Link to = '/Battaglie'>
+                <p className = "enter">
+                  Battaglie
+                </p>
+              </Link>
+              <Link to = '/Invenzioni'>
+                <p className = "enter">
+                  Invenzioni
+                </p>
+              </Link>
+              <Link to = '/Epoche'>
+                <p className = "enter">
+                  Epoche
+                </p>
+              </Link>
+              <Link to = '/Continenti'>
+                <p className = "enter">
+                  Continenti
+                </p>
+              </Link>
+              <Link to = '/Divulgatori'>
+                <p className = "enter">
+                  Divulgatori
+                </p>
+              </Link>
             </div>
 
             {/*
